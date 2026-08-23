@@ -1,10 +1,10 @@
 sscemaroth/
 ├── index.html
 └── images/
-    ├── header-ram.jpg
-    ├── header-ganesh.jpg
+    ├── header-ramji.jpg
+    ├── header-ganeshji.jpg
     ├── header-shyambaba.jpg
-    ├── gallery-center-front.jpg
+    ├── gallery1-center-front.jpg
     ├── gallery-office-view.jpg
     ├── gallery-computer-lab.jpg
     ├── gallery-computer-class.jpg
