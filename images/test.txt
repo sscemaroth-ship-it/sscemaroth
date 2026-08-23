@@ -1,12 +1,10 @@
-sscemaroth/
-├── index.html
-└── images/
-    ├── header-ramji.jpg
-    ├── header-ganeshji.jpg
-    ├── header-shyambaba.jpg
-    ├── gallery1-center-front.jpg
-    ├── gallery2-office-view.jpg
-    ├── gallery3-computer-lab.jpg
-    ├── gallery4-computer-class.jpg
-    ├── gallery5-lab-2.jpg
-    └── gallery6-lab-3.jpg
+images/
+├── gallery1.jpg
+├── gallery2.jpg
+├── gallery3.jpg
+├── gallery4.jpg
+├── gallery5.jpg
+├── gallery6.jpg
+├── ganeshji.jpg
+├── ramji.jpg
+└── shyambaba.jpg
