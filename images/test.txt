@@ -5,8 +5,8 @@ sscemaroth/
     ├── header-ganeshji.jpg
     ├── header-shyambaba.jpg
     ├── gallery1-center-front.jpg
-    ├── gallery-office-view.jpg
-    ├── gallery-computer-lab.jpg
-    ├── gallery-computer-class.jpg
-    ├── gallery-lab-2.jpg
-    └── gallery-lab-3.jpg
+    ├── gallery2-office-view.jpg
+    ├── gallery3-computer-lab.jpg
+    ├── gallery4-computer-class.jpg
+    ├── gallery5-lab-2.jpg
+    └── gallery6-lab-3.jpg
