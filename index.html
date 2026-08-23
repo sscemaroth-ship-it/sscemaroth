@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="SHREE SHYAM COMPUTER EDUCATION - Computer Courses, RS-CIT, Admissions and Training Center">
+<title>SHREE SHYAM COMPUTER EDUCATION | SSCE</title>
 
-<title>SHREE SHYAM COMPUTER EDUCATION | श्री श्याम कंप्यूटर एजुकेशन</title>
+<meta name="description" content="SHREE SHYAM COMPUTER EDUCATION - Computer Courses, RS-CIT, Digital Skills and Online Services">
+<meta name="theme-color" content="#075c32">
 
 <style>
 :root{
-    --green:#0b6b4a;
-    --dark-green:#063d2b;
-    --light-green:#dff6df;
-    --gold:#c89b3c;
-    --light-gold:#f7e7b8;
+    --dark:#033d20;
+    --green:#075c32;
+    --light-green:#eaf7ee;
+    --gold:#f6c343;
+    --gold-light:#ffe9a6;
     --white:#ffffff;
-    --cream:#fffdf5;
-    --dark:#17231d;
-    --shadow:0 12px 35px rgba(0,0,0,.12);
+    --text:#18231d;
+    --gray:#66736b;
+    --shadow:0 15px 40px rgba(0,60,30,.12);
 }
 
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 html{
@@ -32,979 +33,1938 @@ html{
 }
 
 body{
-    font-family:Arial, "Noto Sans Devanagari", sans-serif;
-    background:var(--cream);
-    color:#222;
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    color:var(--text);
+    background:#f6faf7;
     line-height:1.6;
 }
 
-/* ================= HEADER PHOTOS ================= */
-
-.header-photo-strip{
-    width:100%;
-    background:#102219;
-    padding:10px;
-    border-bottom:4px solid var(--gold);
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-.header-photo-grid{
-    width:100%;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
-    max-width:1500px;
-    margin:auto;
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
 }
 
-.header-photo{
-    width:100%;
-    height:250px;
-    border:3px solid var(--gold);
-    border-radius:10px;
-    overflow:hidden;
-    background:#111;
-    box-shadow:0 5px 18px rgba(0,0,0,.35);
+/* TOP BAR */
+
+.top{
+    background:var(--dark);
+    color:#fff;
+    padding:8px 6%;
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    font-size:13px;
 }
 
-.header-photo img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    display:block;
-    background:#111;
-}
+/* HEADER */
 
-/* ================= MAIN HEADER ================= */
-
-.main-header{
-    background:linear-gradient(135deg,var(--dark-green),var(--green),#0f7d53);
-    color:white;
-    text-align:center;
-    padding:25px 15px;
-    border-bottom:5px solid var(--gold);
-    position:relative;
-}
-
-.main-header::before{
-    content:"";
-    position:absolute;
-    inset:8px;
-    border:1px solid rgba(255,255,255,.35);
-    pointer-events:none;
+header{
+    background:#fff;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    box-shadow:0 4px 20px rgba(0,0,0,.06);
 }
 
 .brand{
-    position:relative;
-    z-index:2;
-    max-width:1200px;
-    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:82px;
+    height:82px;
+    display:grid;
+    place-items:center;
+    border:2px solid var(--gold);
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--dark),var(--green));
+    color:#fff;
+    font-size:22px;
+    font-weight:900;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
 }
 
 .brand h1{
-    color:#e6ffd8;
-    font-size:clamp(28px,4vw,52px);
-    letter-spacing:1px;
-    text-shadow:2px 2px 0 rgba(0,0,0,.25);
-    margin-bottom:5px;
+    color:var(--dark);
+    font-size:clamp(22px,3vw,32px);
+    line-height:1.1;
 }
 
-.brand h2{
-    color:#fff7df;
-    font-size:clamp(24px,3.5vw,44px);
-    font-weight:700;
-    margin-bottom:18px;
+.brand h1 span{
+    display:block;
+    color:var(--green);
+    font-size:clamp(18px,2.5vw,25px);
+    margin-top:4px;
 }
 
-.header-details{
+.center-code{
+    display:inline-block;
+    margin-top:9px;
+    padding:5px 14px;
+    border-radius:20px;
+    background:var(--green);
+    color:#fff;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.contacts{
     display:flex;
-    justify-content:space-between;
-    gap:20px;
-    max-width:950px;
-    margin:auto;
-    padding-top:12px;
-    border-top:1px solid rgba(255,255,255,.35);
-    font-size:17px;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    font-weight:bold;
 }
 
-.header-details strong{
-    color:var(--light-gold);
+.enquiry-btn,
+.btn{
+    display:inline-block;
+    border:none;
+    cursor:pointer;
+    padding:13px 22px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.25s;
 }
 
-/* ================= NAVIGATION ================= */
+.enquiry-btn,
+.primary{
+    background:linear-gradient(135deg,var(--gold),#ffd970);
+    color:#26321f;
+}
+
+.btn:hover,
+.enquiry-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* NAVIGATION */
 
 nav{
     position:sticky;
     top:0;
     z-index:1000;
-    background:white;
-    box-shadow:0 3px 15px rgba(0,0,0,.12);
-    border-bottom:2px solid var(--light-gold);
-}
-
-.nav-container{
-    max-width:1200px;
-    margin:auto;
+    background:linear-gradient(90deg,var(--dark),var(--green),var(--dark));
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
+    padding:0 5%;
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
 }
 
-.nav-container a{
-    text-decoration:none;
-    color:var(--dark-green);
-    font-weight:700;
-    padding:17px 24px;
-    transition:.3s;
+nav a{
+    color:#fff;
+    padding:15px 20px;
+    border-bottom:3px solid transparent;
+    font-size:14px;
+    font-weight:bold;
 }
 
-.nav-container a:hover{
-    background:var(--light-green);
-    color:var(--green);
+nav a:hover{
+    background:rgba(255,255,255,.08);
+    border-bottom-color:var(--gold);
 }
 
-/* ================= GENERAL ================= */
-
-section{
-    padding:75px 20px;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:45px;
-}
-
-.section-title h2{
-    color:var(--dark-green);
-    font-size:clamp(30px,4vw,44px);
-    margin-bottom:7px;
-}
-
-.section-title h2 span{
-    color:var(--gold);
-}
-
-.section-title p{
-    color:#666;
-    font-size:18px;
-}
-
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
-    background:linear-gradient(135deg,rgba(6,61,43,.95),rgba(11,107,74,.88));
-    color:white;
-    padding:85px 20px;
-    text-align:center;
+    min-height:570px;
+    padding:55px 7%;
+    background:
+        radial-gradient(circle at 80% 20%,rgba(255,255,255,.18),transparent 22%),
+        linear-gradient(115deg,#003d20,#075c32,#0a8c4b);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    gap:40px;
 }
 
-.hero-content{
-    max-width:950px;
-    margin:auto;
+.hero-text{
+    width:55%;
+}
+
+.welcome{
+    letter-spacing:5px;
+    color:#d8ffe6;
+    font-size:14px;
 }
 
 .hero h2{
-    color:var(--light-gold);
-    font-size:clamp(34px,5vw,60px);
-    margin-bottom:15px;
+    font-size:clamp(38px,5vw,68px);
+    line-height:1.05;
+    margin:12px 0;
 }
 
-.hero h3{
-    color:#e5ffdf;
-    font-size:clamp(24px,3vw,38px);
-    margin-bottom:20px;
+.gold{
+    color:var(--gold);
 }
 
-.hero p{
-    font-size:19px;
-    max-width:800px;
-    margin:0 auto 30px;
-}
-
-.btn{
-    border:none;
-    cursor:pointer;
-    text-decoration:none;
-    display:inline-block;
-    padding:14px 30px;
-    border-radius:30px;
-    font-size:17px;
+.hindi{
+    font-size:clamp(19px,2.5vw,25px);
     font-weight:bold;
-    transition:.3s;
-    margin:5px;
 }
 
-.btn-gold{
-    background:linear-gradient(135deg,#f8df95,var(--gold));
-    color:#263326;
-    box-shadow:0 6px 15px rgba(0,0,0,.2);
+.lead{
+    margin-top:20px;
+    font-size:18px;
+    color:#e2f6e9;
 }
 
-.btn-gold:hover{
-    transform:translateY(-3px);
+.buttons{
+    margin-top:28px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
 }
 
-.btn-white{
-    background:white;
-    color:var(--dark-green);
+.outline{
+    border:1px solid #fff;
+    background:rgba(255,255,255,.10);
+    color:#fff;
 }
 
-/* ================= ABOUT ================= */
+/* DIVINE HEADER PHOTOS */
 
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:35px;
+.visual{
+    width:45%;
+    display:flex;
+    justify-content:center;
     align-items:center;
 }
 
-.about-card{
-    background:white;
-    padding:35px;
+.divine-photos{
+    width:min(100%,560px);
+    display:grid;
+    grid-template-columns:1fr 1.15fr 1fr;
+    align-items:start;
+    gap:10px;
+}
+
+.divine-photo{
+    overflow:hidden;
     border-radius:18px;
-    border:2px solid var(--light-gold);
+    border:2px solid var(--gold);
+    background:transparent;
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+
+.divine-photo.center{
+    border-width:3px;
+}
+
+.divine-photo img{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:contain;
+    background:#10261a;
+}
+
+/* SECTIONS */
+
+section{
+    padding:75px 7%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:48px;
+}
+
+.title h2{
+    font-size:clamp(30px,4vw,42px);
+    color:var(--dark);
+}
+
+.title span{
+    color:#d9a51d;
+}
+
+.title p{
+    color:var(--gray);
+}
+
+/* COURSES */
+
+.courses{
+    background:#fff;
+}
+
+.grid4{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#fff;
+    border:1px solid #d9e8dd;
+    border-radius:20px;
+    padding:28px 20px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.icon{
+    width:76px;
+    height:76px;
+    margin:-60px auto 18px;
+    position:relative;
+    top:35px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:linear-gradient(135deg,var(--dark),var(--green));
+    color:#fff;
+    border:3px solid var(--gold);
+    font-size:32px;
+}
+
+.card h3{
+    margin-top:32px;
+    color:var(--dark);
+    font-size:21px;
+}
+
+.card p{
+    color:var(--gray);
+    margin:12px 0 20px;
+}
+
+.apply{
+    display:block;
+    width:100%;
+    border:none;
+    cursor:pointer;
+    background:var(--green);
+    color:#fff;
+    padding:13px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* INFORMATION */
+
+.info{
+    display:grid;
+    grid-template-columns:1.25fr .9fr 1fr;
+    gap:22px;
+    background:var(--light-green);
+}
+
+.box{
+    background:#fff;
+    padding:32px;
+    border-radius:22px;
     box-shadow:var(--shadow);
 }
 
-.about-card h3{
+.services{
+    background:linear-gradient(145deg,var(--dark),var(--green));
+    color:#fff;
+}
+
+.tag{
+    display:inline-block;
+    background:var(--gold);
+    color:#24311f;
+    padding:8px 14px;
+    border-radius:8px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.service-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    font-size:14px;
+}
+
+.service-list div:before{
+    content:"✓ ";
+    color:#aaffc0;
+    font-weight:bold;
+}
+
+.admission{
+    text-align:center;
+}
+
+.admission .big{
+    font-size:50px;
+}
+
+.why ul{
+    list-style:none;
+}
+
+.why li{
+    padding:11px 0;
+    border-bottom:1px solid #edf2ee;
+}
+
+.why li:before{
+    content:"✓";
     color:var(--green);
-    font-size:28px;
-    margin-bottom:15px;
+    margin-right:10px;
+}
+
+/* ABOUT */
+
+.about{
+    background:linear-gradient(135deg,#043d21,#087541);
+    color:#fff;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about h2{
+    font-size:35px;
+    margin-bottom:18px;
+}
+
+.about p{
+    color:#ddf7e5;
+    font-size:17px;
 }
 
 .features{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:15px;
-    margin-top:20px;
 }
 
 .feature{
-    background:var(--light-green);
-    padding:15px;
-    border-left:5px solid var(--gold);
-    border-radius:8px;
+    padding:20px;
+    border-radius:14px;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.18);
+}
+
+.feature strong{
+    display:block;
+    color:var(--gold);
+    margin-bottom:6px;
+}
+
+/* ADMISSION STEPS */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.step{
+    padding:28px;
+    text-align:center;
+    border-radius:18px;
+    background:#f8fcf9;
+    border:1px solid #dcece0;
+    box-shadow:var(--shadow);
+}
+
+.num{
+    width:50px;
+    height:50px;
+    margin:auto auto 15px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:var(--green);
+    color:#fff;
+    font-size:20px;
     font-weight:bold;
 }
 
-/* ================= COURSES ================= */
-
-.courses{
-    background:#f2f9f1;
-}
-
-.course-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.course-card{
-    background:white;
-    border-radius:18px;
-    padding:30px;
-    text-align:center;
-    border:1px solid var(--light-gold);
-    box-shadow:var(--shadow);
-    transition:.3s;
-}
-
-.course-card:hover{
-    transform:translateY(-7px);
-}
-
-.course-icon{
-    width:75px;
-    height:75px;
-    margin:0 auto 18px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:34px;
-    background:var(--light-green);
-    border:3px solid var(--gold);
-}
-
-.course-card h3{
-    color:var(--dark-green);
-    font-size:25px;
-    margin-bottom:10px;
-}
-
-.course-card .hindi{
-    color:#777;
-    margin-bottom:18px;
-}
-
-/* ================= GALLERY ================= */
+/* GALLERY */
 
 .gallery{
-    background:white;
+    background:linear-gradient(180deg,#f6faf7,#fff);
 }
 
 .gallery-grid{
+    max-width:1250px;
+    margin:auto;
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    gap:22px;
 }
 
-.gallery-card{
+.gallery-item{
     background:#fff;
-    border-radius:18px;
+    border-radius:20px;
     overflow:hidden;
-    border:2px solid var(--light-gold);
+    border:1px solid #d9e8dd;
     box-shadow:var(--shadow);
     cursor:pointer;
     transition:.3s;
 }
 
-.gallery-card:hover{
-    transform:translateY(-6px);
+.gallery-item:hover{
+    transform:translateY(-8px);
 }
 
-.gallery-image{
+.gallery-item img{
     width:100%;
-    height:270px;
-    background:#eee;
-    overflow:hidden;
-}
-
-.gallery-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+    height:250px;
     display:block;
+    object-fit:cover;
     transition:.4s;
 }
 
-.gallery-card:hover img{
-    transform:scale(1.05);
+.gallery-item:hover img{
+    transform:scale(1.06);
 }
 
-.gallery-caption{
-    padding:18px 12px;
+.gallery-item figcaption{
+    padding:15px;
+    font-weight:bold;
+    color:var(--dark);
     text-align:center;
 }
 
-.gallery-caption h3{
-    color:var(--dark-green);
-    font-size:21px;
+/* LIGHTBOX */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.94);
+    z-index:10000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:40px 70px;
 }
 
-.gallery-caption p{
-    color:#777;
-    font-size:16px;
-    margin-top:3px;
+.lightbox.show{
+    display:flex;
 }
 
-/* ================= ADMISSION ================= */
-
-.admission{
-    background:linear-gradient(135deg,var(--dark-green),var(--green));
-    color:white;
+.lightbox img{
+    max-width:92vw;
+    max-height:82vh;
+    object-fit:contain;
+    border:3px solid var(--gold);
+    border-radius:14px;
 }
 
-.admission-box{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    padding:45px 25px;
-    border:2px solid var(--gold);
+.lightbox-close,
+.lightbox-nav{
+    position:absolute;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+    background:rgba(255,255,255,.14);
+    display:grid;
+    place-items:center;
+}
+
+.lightbox-close{
+    top:20px;
+    right:25px;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    font-size:32px;
+}
+
+.lightbox-nav{
+    top:50%;
+    transform:translateY(-50%);
+    width:52px;
+    height:70px;
+    border-radius:12px;
+    font-size:28px;
+}
+
+.lightbox-nav.prev{
+    left:20px;
+}
+
+.lightbox-nav.next{
+    right:20px;
+}
+
+.lightbox-caption{
+    position:absolute;
+    bottom:22px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#fff;
+    background:rgba(0,0,0,.55);
+    padding:9px 16px;
     border-radius:20px;
-    background:rgba(255,255,255,.08);
+    text-align:center;
 }
 
-.admission h2{
-    color:var(--light-gold);
-    font-size:40px;
-    margin-bottom:10px;
+/* CONTACT */
+
+.contact{
+    background:#fff;
 }
 
-.admission p{
-    margin-bottom:25px;
-    font-size:18px;
-}
-
-/* ================= CONTACT ================= */
-
-.contact-grid{
+.contact-box{
+    max-width:1100px;
+    margin:auto;
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:30px;
-}
-
-.contact-card{
-    background:white;
-    border:2px solid var(--light-gold);
-    border-radius:18px;
-    padding:30px;
+    gap:35px;
+    background:#fff;
+    padding:35px;
+    border-radius:22px;
     box-shadow:var(--shadow);
 }
 
-.contact-card h3{
-    color:var(--dark-green);
+.contact-box h3{
+    color:var(--dark);
     font-size:28px;
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
-.contact-item{
-    padding:14px 0;
-    border-bottom:1px solid #eee;
+.contact-box p{
+    margin:12px 0;
 }
 
 .map-box{
     overflow:hidden;
     border-radius:18px;
-    border:2px solid var(--light-gold);
-    min-height:420px;
-    box-shadow:var(--shadow);
+    border:1px solid #d9e8dd;
+    min-height:360px;
 }
 
 .map-box iframe{
     width:100%;
-    height:420px;
+    height:360px;
     border:0;
+    display:block;
 }
 
-/* ================= FOOTER ================= */
+.call,
+.whatsapp{
+    display:inline-block;
+    padding:13px 20px;
+    border-radius:8px;
+    color:#fff;
+    font-weight:bold;
+    margin:15px 8px 0 0;
+}
+
+.call{
+    background:var(--green);
+}
+
+.whatsapp{
+    background:#25a657;
+}
+
+/* FOOTER */
 
 footer{
-    background:#092b20;
-    color:white;
+    background:#022f19;
+    color:#fff;
+    padding:50px 7% 20px;
+}
+
+.foot{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:30px;
+    padding-bottom:25px;
+    border-bottom:1px solid rgba(255,255,255,.18);
+}
+
+footer h3{
+    color:var(--gold);
+    margin-bottom:12px;
+}
+
+footer p,
+footer li{
+    color:#c9dfd0;
+    font-size:14px;
+    margin:7px 0;
+    list-style:none;
+}
+
+.copy{
     text-align:center;
-    padding:28px 15px;
-    border-top:4px solid var(--gold);
+    color:#aac4b3;
+    padding-top:20px;
+    font-size:13px;
 }
 
-footer strong{
-    color:var(--light-gold);
+/* FLOATING BUTTONS */
+
+.float{
+    position:fixed;
+    bottom:20px;
+    z-index:2000;
+    padding:13px 18px;
+    border-radius:30px;
+    color:#fff;
+    font-weight:bold;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
-/* ================= MODAL ================= */
+.fcall{
+    left:20px;
+    background:var(--green);
+}
 
-.modal{
-    display:none;
+.fwa{
+    right:20px;
+    background:#25a657;
+}
+
+/* ADMISSION POPUP */
+
+.admission-modal{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.72);
-    z-index:3000;
+    background:rgba(12,25,18,.75);
+    display:none;
     align-items:center;
     justify-content:center;
-    padding:15px;
+    padding:18px;
+    z-index:15000;
 }
 
-.modal.active{
+.admission-modal.show{
     display:flex;
 }
 
-.modal-content{
-    width:100%;
-    max-width:620px;
-    max-height:95vh;
+.admission-form-box{
+    width:min(700px,100%);
+    max-height:92vh;
     overflow:auto;
-    background:white;
-    border-radius:18px;
-    padding:28px;
-    position:relative;
+    background:#fff;
     border:3px solid var(--gold);
+    border-radius:22px;
+    padding:30px;
+    position:relative;
+    box-shadow:0 25px 80px rgba(0,0,0,.35);
 }
 
-.close-modal{
+.admission-form-box h2{
+    margin-bottom:6px;
+    color:var(--dark);
+    font-size:28px;
+}
+
+.admission-form-box p{
+    margin-bottom:20px;
+    color:var(--gray);
+}
+
+.form-close{
     position:absolute;
     right:16px;
-    top:10px;
-    font-size:32px;
-    cursor:pointer;
-    color:#a00000;
+    top:12px;
     border:none;
-    background:none;
+    background:#f1f4f1;
+    color:#333;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    font-size:25px;
+    cursor:pointer;
 }
 
-.modal-content h2{
-    color:var(--dark-green);
-    margin-bottom:5px;
-    padding-right:35px;
+.student-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
 }
 
-.modal-content .subtitle{
-    color:#777;
-    margin-bottom:20px;
+.student-form .full{
+    grid-column:1/-1;
 }
 
-.form-group{
-    margin-bottom:15px;
-}
-
-.form-group label{
+.student-form label{
     display:block;
-    margin-bottom:6px;
+    font-size:13px;
     font-weight:bold;
-    color:var(--dark-green);
+    color:#334;
+    margin-bottom:6px;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea{
+.student-form input,
+.student-form select,
+.student-form textarea{
     width:100%;
-    padding:13px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    font-size:16px;
+    border:1px solid #cfd9d2;
+    border-radius:10px;
+    padding:12px 13px;
+    font-size:15px;
+    outline:none;
 }
 
-.form-group textarea{
-    min-height:90px;
+.student-form input:focus,
+.student-form select:focus,
+.student-form textarea:focus{
+    border-color:var(--green);
+    box-shadow:0 0 0 3px rgba(7,92,50,.12);
+}
+
+.student-form textarea{
+    min-height:82px;
     resize:vertical;
 }
 
-.form-submit{
-    width:100%;
-    margin-top:8px;
+.form-note{
+    font-size:12px;
+    color:var(--gray);
+    margin-top:10px;
 }
 
-/* ================= FULL SCREEN IMAGE ================= */
+/* RESPONSIVE */
 
-.image-modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    z-index:4000;
-    background:rgba(0,0,0,.93);
-    align-items:center;
-    justify-content:center;
-    padding:25px;
-}
+@media(max-width:1000px){
 
-.image-modal.active{
-    display:flex;
-}
-
-.image-modal img{
-    max-width:96%;
-    max-height:90vh;
-    object-fit:contain;
-    border:3px solid var(--gold);
-    border-radius:8px;
-}
-
-.image-close{
-    position:absolute;
-    top:18px;
-    right:25px;
-    color:white;
-    font-size:42px;
-    cursor:pointer;
-}
-
-/* ================= WHATSAPP BUTTON ================= */
-
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    z-index:2000;
-    background:#25d366;
-    color:white;
-    text-decoration:none;
-    padding:15px 22px;
-    border-radius:35px;
-    font-weight:bold;
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:900px){
-
-    .header-photo{
-        height:190px;
+    header,
+    .hero{
+        flex-direction:column;
+        text-align:center;
     }
 
-    .course-grid,
-    .gallery-grid{
+    .contacts{
+        justify-content:center;
+    }
+
+    .hero-text,
+    .visual{
+        width:100%;
+    }
+
+    .grid4{
         grid-template-columns:repeat(2,1fr);
     }
 
+    .info,
     .about-grid,
-    .contact-grid{
+    .contact-box{
         grid-template-columns:1fr;
+    }
+
+    .steps{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .foot{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 }
 
-@media(max-width:600px){
+@media(max-width:650px){
 
-    .header-photo-strip{
-        padding:5px;
+    .top{
+        justify-content:center;
+        text-align:center;
     }
 
-    .header-photo-grid{
-        gap:4px;
+    .top span:last-child{
+        display:none;
     }
 
-    .header-photo{
-        height:125px;
-        border-width:1px;
-        border-radius:5px;
+    header{
+        padding:14px;
     }
 
-    .main-header{
-        padding:20px 10px;
-    }
-
-    .header-details{
+    .brand{
         flex-direction:column;
-        gap:7px;
-        font-size:15px;
+        text-align:center;
     }
 
-    .nav-container{
+    .brand h1{
+        font-size:22px;
+    }
+
+    .brand h1 span{
+        font-size:18px;
+    }
+
+    .logo{
+        width:68px;
+        height:68px;
+        font-size:18px;
+    }
+
+    nav{
         justify-content:flex-start;
-        overflow-x:auto;
         flex-wrap:nowrap;
+        overflow-x:auto;
     }
 
-    .nav-container a{
-        padding:13px 15px;
+    nav a{
         white-space:nowrap;
-        font-size:14px;
+        padding:12px 11px;
+        font-size:12px;
     }
 
     section{
-        padding:55px 15px;
-    }
-
-    .course-grid,
-    .gallery-grid{
-        grid-template-columns:1fr;
-    }
-
-    .gallery-image{
-        height:250px;
-    }
-
-    .features{
-        grid-template-columns:1fr;
+        padding:60px 5%;
     }
 
     .hero{
-        padding:65px 15px;
+        padding:50px 6%;
     }
 
-    .modal-content{
+    .divine-photos{
+        gap:5px;
+    }
+
+    .divine-photo{
+        border-radius:10px;
+        border-width:1px;
+    }
+
+    .grid4,
+    .steps,
+    .features,
+    .gallery-grid,
+    .student-form{
+        grid-template-columns:1fr;
+    }
+
+    .student-form .full{
+        grid-column:auto;
+    }
+
+    .service-list{
+        grid-template-columns:1fr;
+    }
+
+    .foot{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item img{
+        height:240px;
+    }
+
+    .admission-form-box{
         padding:24px 18px;
     }
+
+    .lightbox{
+        padding:25px 12px;
+    }
+
+    .lightbox img{
+        max-width:100%;
+        max-height:76vh;
+    }
+
+    .lightbox-nav{
+        width:42px;
+        height:58px;
+    }
+
+    .lightbox-nav.prev{
+        left:6px;
+    }
+
+    .lightbox-nav.next{
+        right:6px;
+    }
+
+    .float{
+        font-size:12px;
+        padding:11px 14px;
+    }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- HEADER PHOTOS -->
-<div class="header-photo-strip">
-    <div class="header-photo-grid">
-
-        <div class="header-photo">
-            <img src="images/ramji.jpg" alt="Shri Ram">
-        </div>
-
-        <div class="header-photo">
-            <img src="images/ganeshji.jpg" alt="Shri Ganesh">
-        </div>
-
-        <div class="header-photo">
-            <img src="images/shyambaba.jpg" alt="Shri Shyam Baba">
-        </div>
-
-    </div>
+<div class="top">
+    <span>🎓 Empowering Students. Building Better Futures.</span>
+    <span>Computer Education | Digital Skills | Student Support</span>
 </div>
 
-<!-- MAIN HEADER -->
-<header class="main-header">
+<header>
+
     <div class="brand">
 
-        <h1>SHREE SHYAM COMPUTER EDUCATION</h1>
-        <h2>श्री श्याम कंप्यूटर एजुकेशन</h2>
+        <div class="logo">SSCE</div>
 
-        <div class="header-details">
-            <div><strong>Center Code:</strong> 32290325</div>
-            <div><strong>Email ID:</strong> sscemaroth@gmail.com</div>
+        <div>
+            <h1>
+                SHREE SHYAM
+                <span>COMPUTER EDUCATION</span>
+            </h1>
+
+            <div class="center-code">
+                Center Code: 32290325
+            </div>
         </div>
 
     </div>
+
+    <div class="contacts">
+        <span>📞 01586-299472</span>
+        <span>🟢 7231905659</span>
+        <a class="enquiry-btn open-admission"
+           href="#admission"
+           data-course="">
+           📝 ENQUIRY NOW
+        </a>
+    </div>
+
 </header>
 
-<!-- NAVIGATION -->
 <nav>
-    <div class="nav-container">
-        <a href="#home">🏠 Home</a>
-        <a href="#about">🏫 About Us</a>
-        <a href="#courses">📚 Courses</a>
-        <a href="#gallery">🖼️ Gallery</a>
-        <a href="#admission">🎓 Admission</a>
-        <a href="#contact">📍 Contact</a>
-    </div>
+    <a href="#home">🏠 Home</a>
+    <a href="#about">🏫 About Us</a>
+    <a href="#courses">📚 Courses</a>
+    <a href="#services">🌐 Services</a>
+    <a href="#gallery">📸 Gallery</a>
+    <a href="#admission">🎓 Admission</a>
+    <a href="#contact">📍 Contact</a>
 </nav>
 
 <!-- HOME -->
+
 <section class="hero" id="home">
-    <div class="hero-content">
 
-        <h2>Welcome to SSCE Computer Center</h2>
-        <h3>श्री श्याम कंप्यूटर एजुकेशन</h3>
+    <div class="hero-text">
 
-        <p>
-            Computer education, digital skills and professional training
-            for students. Learn with practical computer knowledge and
-            build your future.
-        </p>
+        <div class="welcome">WELCOME TO</div>
 
-        <a href="#courses" class="btn btn-gold">
-            Explore Courses / कोर्स देखें
-        </a>
+        <h2>
+            SHREE SHYAM<br>
+            <span class="gold">COMPUTER EDUCATION</span>
+        </h2>
 
-        <button class="btn btn-white" onclick="openAdmissionForm()">
-            Apply Now / आवेदन करें
-        </button>
-
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-    <div class="container">
-
-        <div class="section-title">
-            <h2>About <span>Us</span></h2>
-            <p>हमारे संस्थान के बारे में</p>
+        <div class="hindi">
+            <span class="gold">
+                श्री श्याम कंप्यूटर एजुकेशन
+            </span>
+            में आपका स्वागत है।
         </div>
 
-        <div class="about-grid">
+        <div class="lead">
+            <strong>Learn Computer Skills for a Better Future</strong>
+            <br>
+            बेहतर भविष्य के लिए कंप्यूटर कौशल सीखें।
+        </div>
 
-            <div class="about-card">
+        <div class="buttons">
 
-                <h3>SHREE SHYAM COMPUTER EDUCATION</h3>
+            <a class="btn primary" href="#courses">
+                📚 EXPLORE COURSES
+            </a>
 
-                <p>
-                    श्री श्याम कंप्यूटर एजुकेशन में विद्यार्थियों को
-                    कंप्यूटर और डिजिटल शिक्षा प्रदान की जाती है।
-                    हमारा उद्देश्य विद्यार्थियों को practical knowledge
-                    और बेहतर career opportunities के लिए तैयार करना है।
-                </p>
+            <button type="button"
+                    class="btn outline open-admission"
+                    data-course="">
+                📝 APPLY NOW / आवेदन करें
+            </button>
 
-                <div class="features">
-                    <div class="feature">💻 Practical Computer Training</div>
-                    <div class="feature">📚 Professional Courses</div>
-                    <div class="feature">👨‍🏫 Student Guidance</div>
-                    <div class="feature">🎓 Career Focused Learning</div>
-                </div>
+        </div>
 
+    </div>
+
+    <!-- RAMJI LEFT - GANESHJI CENTER - SHYAM BABA RIGHT -->
+
+    <div class="visual">
+
+        <div class="divine-photos">
+
+            <div class="divine-photo">
+                <img src="images/ramji.jpg" alt="Shri Ram">
             </div>
 
-            <div class="about-card">
+            <div class="divine-photo center">
+                <img src="images/ganeshji.jpg" alt="Shri Ganesh">
+            </div>
 
-                <h3>Why Choose Us?</h3>
-
-                <p>
-                    ✔ अनुभवी मार्गदर्शन<br>
-                    ✔ कंप्यूटर की practical training<br>
-                    ✔ विभिन्न कंप्यूटर courses<br>
-                    ✔ विद्यार्थियों के लिए friendly environment<br>
-                    ✔ आधुनिक learning facilities
-                </p>
-
+            <div class="divine-photo">
+                <img src="images/shyambaba.jpg" alt="Shri Shyam Baba">
             </div>
 
         </div>
 
     </div>
+
 </section>
 
 <!-- COURSES -->
+
 <section class="courses" id="courses">
 
-    <div class="container">
+    <div class="title">
+        <h2>OUR <span>COURSES</span></h2>
+        <p>कंप्यूटर शिक्षा और डिजिटल कौशल के लिए हमारे कोर्स</p>
+    </div>
 
-        <div class="section-title">
-            <h2>Our <span>Courses</span></h2>
-            <p>हमारे कंप्यूटर कोर्स</p>
+    <div class="grid4">
+
+        <div class="card">
+
+            <div class="icon">💻</div>
+
+            <h3>RS-CIT REGULAR</h3>
+
+            <p>
+                Computer fundamentals, internet and digital skills.
+            </p>
+
+            <button type="button"
+                    class="apply open-admission"
+                    data-course="RSCIT REGULAR">
+                APPLY NOW
+            </button>
+
         </div>
 
-        <div class="course-grid">
+        <div class="card">
 
-            <div class="course-card">
+            <div class="icon">🖥️</div>
 
-                <div class="course-icon">💻</div>
+            <h3>RSCIT WITHOUT STUDY</h3>
 
-                <h3>RS-CIT</h3>
+            <p>
+                RS-CIT related admission and student support.
+            </p>
 
-                <p class="hindi">
-                    राजस्थान स्टेट सर्टिफिकेट इन इन्फॉर्मेशन टेक्नोलॉजी
-                </p>
+            <button type="button"
+                    class="apply open-admission"
+                    data-course="RSCIT WITHOUT STUDY">
+                APPLY NOW
+            </button>
 
-                <p>
-                    Basic computer knowledge, internet and digital skills.
-                </p>
+        </div>
 
-                <br>
+        <div class="card">
 
-                <button class="btn btn-gold"
-                        onclick="openAdmissionForm('RS-CIT')">
-                    Apply Now / आवेदन करें
-                </button>
+            <div class="icon">📊</div>
 
+            <h3>RSCFA / TALLY</h3>
+
+            <p>
+                Accounting, financial and practical computer skills.
+            </p>
+
+            <button type="button"
+                    class="apply open-admission"
+                    data-course="RSCFA / TALLY">
+                APPLY NOW
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">⌨️</div>
+
+            <h3>BCC & COMPUTER</h3>
+
+            <p>
+                Basic computer knowledge and practical training.
+            </p>
+
+            <button type="button"
+                    class="apply open-admission"
+                    data-course="BCC">
+                APPLY NOW
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="info" id="services">
+
+    <div class="box services">
+
+        <h2>ONLINE SERVICES</h2>
+
+        <div class="tag">Digital सुविधा केंद्र</div>
+
+        <div class="service-list">
+            <div>Online Forms</div>
+            <div>Scholarship Forms</div>
+            <div>Recruitment Forms</div>
+            <div>Exam Forms</div>
+            <div>Government Services</div>
+            <div>Document Services</div>
+        </div>
+
+    </div>
+
+    <div class="box admission" id="admission">
+
+        <div class="big">🎓</div>
+
+        <h2>ADMISSION OPEN</h2>
+
+        <p>
+            नए प्रवेश के लिए अपना Admission Form भरें।
+        </p>
+
+        <button type="button"
+                class="btn primary open-admission"
+                data-course="">
+            APPLY FOR ADMISSION
+        </button>
+
+    </div>
+
+    <div class="box why">
+
+        <h2>WHY CHOOSE SSCE?</h2>
+
+        <ul>
+            <li>Experienced Faculty</li>
+            <li>Practical Computer Training</li>
+            <li>Student Guidance</li>
+            <li>Online Form Assistance</li>
+            <li>Student Support</li>
+            <li>Career-Oriented Learning</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="about-grid">
+
+        <div>
+
+            <h2>ABOUT SHREE SHYAM COMPUTER EDUCATION</h2>
+
+            <p>
+                Shree Shyam Computer Education (SSCE) विद्यार्थियों को
+                आधुनिक कंप्यूटर शिक्षा, डिजिटल कौशल और विभिन्न ऑनलाइन
+                सेवाएँ प्रदान करने के उद्देश्य से कार्यरत है।
+            </p>
+
+            <br>
+
+            <p>
+                हमारा लक्ष्य विद्यार्थियों को तकनीकी रूप से सक्षम बनाकर
+                बेहतर भविष्य के लिए तैयार करना है।
+            </p>
+
+        </div>
+
+        <div class="features">
+
+            <div class="feature">
+                <strong>🎯 Practical Learning</strong>
+                सीखने के साथ प्रैक्टिकल अभ्यास।
             </div>
 
-            <div class="course-card">
-
-                <div class="course-icon">🖥️</div>
-
-                <h3>Computer Course</h3>
-
-                <p class="hindi">कंप्यूटर प्रशिक्षण</p>
-
-                <p>
-                    Learn computer fundamentals and practical computer skills.
-                </p>
-
-                <br>
-
-                <button class="btn btn-gold"
-                        onclick="openAdmissionForm('Computer Course')">
-                    Apply Now / आवेदन करें
-                </button>
-
+            <div class="feature">
+                <strong>👨‍🏫 Guidance</strong>
+                विद्यार्थियों के लिए उचित मार्गदर्शन।
             </div>
 
-            <div class="course-card">
+            <div class="feature">
+                <strong>💻 Digital Skills</strong>
+                आधुनिक कंप्यूटर कौशल।
+            </div>
 
-                <div class="course-icon">🌐</div>
-
-                <h3>Digital Services</h3>
-
-                <p class="hindi">डिजिटल सेवाएं</p>
-
-                <p>
-                    Learn useful digital and online services.
-                </p>
-
-                <br>
-
-                <button class="btn btn-gold"
-                        onclick="openAdmissionForm('Digital Services')">
-                    Apply Now / आवेदन करें
-                </button>
-
+            <div class="feature">
+                <strong>🚀 Better Future</strong>
+                कैरियर के लिए उपयोगी शिक्षा।
             </div>
 
         </div>
 
     </div>
+
+</section>
+
+<!-- ADMISSION PROCESS -->
+
+<section>
+
+    <div class="title">
+        <h2>ADMISSION <span>PROCESS</span></h2>
+        <p>प्रवेश लेने की सरल प्रक्रिया</p>
+    </div>
+
+    <div class="steps">
+
+        <div class="step">
+            <div class="num">1</div>
+            <h3>Choose Course</h3>
+            <p>अपना पसंदीदा कोर्स चुनें।</p>
+        </div>
+
+        <div class="step">
+            <div class="num">2</div>
+            <h3>Fill Form</h3>
+            <p>Admission Form भरें।</p>
+        </div>
+
+        <div class="step">
+            <div class="num">3</div>
+            <h3>WhatsApp Submit</h3>
+            <p>Details WhatsApp पर भेजें।</p>
+        </div>
+
+        <div class="step">
+            <div class="num">4</div>
+            <h3>Contact SSCE</h3>
+            <p>आगे की जानकारी के लिए संपर्क करें।</p>
+        </div>
+
+    </div>
+
 </section>
 
 <!-- GALLERY -->
+
 <section class="gallery" id="gallery">
 
-    <div class="container">
+    <div class="title">
+        <h2>OUR <span>GALLERY</span></h2>
+        <p>हमारे संस्थान की तस्वीरें देखने के लिए फोटो पर क्लिक करें</p>
+    </div>
 
-        <div class="section-title">
-            <h2>Our <span>Gallery</span></h2>
-            <p>हमारे संस्थान की तस्वीरें</p>
+    <div class="gallery-grid">
+
+        <figure class="gallery-item" onclick="openLightbox(0)">
+            <img src="images/gallery1.jpg" alt="SSCE Computer Center Front View">
+            <figcaption>SSCE Computer Center Front View</figcaption>
+        </figure>
+
+        <figure class="gallery-item" onclick="openLightbox(1)">
+            <img src="images/gallery2.jpg" alt="Office View">
+            <figcaption>Office View</figcaption>
+        </figure>
+
+        <figure class="gallery-item" onclick="openLightbox(2)">
+            <img src="images/gallery3.jpg" alt="Computer Class">
+            <figcaption>Computer Class</figcaption>
+        </figure>
+
+        <figure class="gallery-item" onclick="openLightbox(3)">
+            <img src="images/gallery4.jpg" alt="Computer Lab">
+            <figcaption>Computer Lab</figcaption>
+        </figure>
+
+        <figure class="gallery-item" onclick="openLightbox(4)">
+            <img src="images/gallery5.jpg" alt="Office View">
+            <figcaption>Office View</figcaption>
+        </figure>
+
+        <figure class="gallery-item" onclick="openLightbox(5)">
+            <img src="images/gallery6.jpg" alt="Computer Lab">
+            <figcaption>Computer Lab</figcaption>
+        </figure>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="title">
+        <h2>CONTACT <span>US</span></h2>
+        <p>हमसे संपर्क करें और हमारी location देखें</p>
+    </div>
+
+    <div class="contact-box">
+
+        <div>
+
+            <h3>SHREE SHYAM COMPUTER EDUCATION</h3>
+
+            <p>
+                <strong>श्री श्याम कंप्यूटर एजुकेशन</strong>
+            </p>
+
+            <p>
+                🎓 Center Code: <strong>32290325</strong>
+            </p>
+
+            <p>
+                📞 Phone: <strong>01586-299472</strong>
+            </p>
+
+            <p>
+                🟢 WhatsApp: <strong>7231905659</strong>
+            </p>
+
+            <p>
+                📧 Email: <strong>sscemaroth@gmail.com</strong>
+            </p>
+
+            <a class="call" href="tel:01586299472">
+                📞 Call Now
+            </a>
+
+            <a class="whatsapp"
+               href="https://wa.me/917231905659"
+               target="_blank">
+                🟢 WhatsApp
+            </a>
+
+            <br>
+
+            <a class="btn primary"
+               href="https://maps.app.goo.gl/dWzr7Fpv7VkH942D8"
+               target="_blank">
+                📍 Open Google Map
+            </a>
+
         </div>
 
-        <div class="gallery-grid">
+        <div class="map-box">
 
-            <!-- CENTER FRONT VIEW -->
-            <div class="gallery-card"
-                 onclick="openImage('images/gallery1.jpg')">
+            <iframe
+                src="https://www.google.com/maps?q=Maroth,Rajasthan&output=embed"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
 
-                <div class="gallery-image">
-                    <img src="images/gallery1.jpg"
-                         alt="SSCE Computer Center Front View">
-                </div>
+        </div>
 
-                <div class="gallery-caption">
-                    <h3>SSCE Computer Center</h3>
-                    <p>श्री श्याम कंप्यूटर एजुकेशन</p>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="foot">
+
+        <div>
+            <h2>SSCE</h2>
+            <p>SHREE SHYAM COMPUTER EDUCATION</p>
+            <p>Computer Courses, Digital Skills and Online Services.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Courses</li>
+                <li>Gallery</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Services</h3>
+            <ul>
+                <li>Online Forms</li>
+                <li>Scholarship Forms</li>
+                <li>Recruitment Forms</li>
+                <li>Exam Forms</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>📞 01586-299472</p>
+            <p>🟢 7231905659</p>
+            <p>Center Code: 32290325</p>
+        </div>
+
+    </div>
+
+    <div class="copy">
+        © 2026 SHREE SHYAM COMPUTER EDUCATION (SSCE). All Rights Reserved.
+    </div>
+
+</footer>
+
+<!-- FLOATING BUTTONS -->
+
+<a class="float fcall" href="tel:01586299472">
+    📞 Call
+</a>
+
+<a class="float fwa"
+   href="https://wa.me/917231905659"
+   target="_blank">
+    🟢 WhatsApp
+</a>
+
+<!-- ADMISSION FORM POPUP -->
+
+<div class="admission-modal"
+     id="admissionModal"
+     aria-hidden="true">
+
+    <div class="admission-form-box">
+
+        <button class="form-close"
+                type="button"
+                onclick="closeAdmissionForm()">
+            ×
+        </button>
+
+        <h2>STUDENT ADMISSION FORM</h2>
+
+        <p>
+            अपनी जानकारी भरें। Submit करने पर आपकी details
+            WhatsApp पर भेजने के लिए तैयार होंगी।
+        </p>
+
+        <form id="studentAdmissionForm"
+              class="student-form">
+
+            <div>
+                <label>Student Name / विद्यार्थी का नाम *</label>
+
+                <input
+                    name="name"
+                    required
+                    placeholder="पूरा नाम">
+            </div>
+
+            <div>
+                <label>Father's Name / पिता का नाम *</label>
+
+                <input
+                    name="father"
+                    required
+                    placeholder="पिता का नाम">
+            </div>
+
+            <div>
+                <label>Mobile Number / मोबाइल नंबर *</label>
+
+                <input
+                    name="mobile"
+                    required
+                    inputmode="numeric"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    placeholder="10 digit mobile number">
+            </div>
+
+            <div>
+                <label>Email</label>
+
+                <input
+                    name="email"
+                    type="email"
+                    placeholder="example@email.com">
+            </div>
+
+            <div>
+                <label>Course / कोर्स *</label>
+
+                <select name="course"
+                        id="courseSelect"
+                        required>
+
+                    <option value="">Select Course</option>
+                    <option>RSCIT REGULAR</option>
+                    <option>RSCIT WITHOUT STUDY</option>
+                    <option>RSCFA / TALLY</option>
+                    <option>BCC</option>
+                    <option>Other Course</option>
+
+                </select>
+            </div>
+
+            <div>
+                <label>Highest Qualification *</label>
+
+                <select name="qualification"
+                        required>
+
+                    <option value="">Select Qualification</option>
+                    <option>8th</option>
+                    <option>10th</option>
+                    <option>12th</option>
+                    <option>Graduate</option>
+                    <option>Post Graduate</option>
+                    <option>Other</option>
+
+                </select>
+            </div>
+
+            <div class="full">
+
+                <label>Address / पता *</label>
+
+                <textarea
+                    name="address"
+                    required
+                    placeholder="पूरा पता"></textarea>
+
+            </div>
+
+            <div class="full">
+
+                <label>Message / Query</label>
+
+                <textarea
+                    name="message"
+                    placeholder="कोई अन्य जानकारी या प्रश्न"></textarea>
+
+            </div>
+
+            <div class="full">
+
+                <button class="btn primary"
+                        type="submit"
+                        style="width:100%;">
+
+                    📝 SUBMIT ON WHATSAPP
+
+                </button>
+
+                <div class="form-note">
+                    * आवश्यक जानकारी
                 </div>
 
             </div>
 
-            <!-- OFFICE VIEW -->
-            <div class="gallery-card"
-                 onclick="openImage('images/gallery2.jpg')">
+        </form>
 
-                <div class="gallery-image">
-                    <img src="images/gallery2.jpg"
-                         alt="Office View">
-                </div>
+    </div>
 
-                <div class="gallery-caption">
-                    <h3>Office View</h3>
-                    <p>कार्यालय का दृश्य</p>
-                </div>
+</div>
 
-            </div>
+<!-- FULL SCREEN GALLERY -->
 
-            <!-- COMPUTER CLASS -->
-            <div class="gallery-card"
-                 onclick="openImage('images/gallery3.jpg')">
+<div class="lightbox"
+     id="lightbox"
+     aria-hidden="true">
 
-                <div class="gallery-image">
-                    <img src="images/gallery3.jpg"
-                         alt="Computer Class">
-                </div>
+    <button class="lightbox-close"
+            type="button"
+            onclick="closeLightbox()">
+        ×
+    </button>
 
-                <div class="gallery-caption">
-                    <h3>Computer Class</h3>
-                    <p>कंप्यूटर कक्षा</p>
-                </div>
+    <button class="lightbox-nav prev"
+            type="button"
+            onclick="changeImage(-1)">
+        ❮
+    </button>
 
-            </div>
+    <img id="lightboxImage"
+         src=""
+         alt="Gallery Image">
 
-            <!-- COMPUTER LAB -->
-            <div class="gallery-card"
-                 onclick="openImage('images/gallery4.jpg')">
+    <button class="lightbox-nav next"
+            type="button"
+            onclick="changeImage(1)">
+        ❯
+    </button>
 
-                <div class="gallery-image">
-                    <img src="images/gallery4.jpg"
-                         alt="Computer Lab">
-                </div>
+    <div class="lightbox-caption"
+         id="lightboxCaption">
+    </div>
 
-                <div class="gallery-caption">
-                    <h3>Computer Lab</h3>
-                    <p>कंप्यूटर प्रयोगशाला</p>
-                </div>
+</div>
 
-            </div>
+<script>
 
-            <!-- OFFICE VIEW -->
-            <div class="gallery-card"
-                 onclick="openImage('images/gallery5.jpg')">
+/* =========================
+   GALLERY LIGHTBOX
+========================= */
 
-                <div class="gallery-image">
-                    <img src="images/gallery5.jpg"
-                         alt="Office View">
-                </div>
+const galleryImages =
+    Array.from(document.querySelectorAll(".gallery-item img"));
 
-                <div class="gallery-caption">
-                    <h3>Office View</h3>
-                    <p>कार्यालय का दृश्य</p>
-                </div>
+let currentImage = 0;
 
-            </div>
+function openLightbox(index){
 
-            <!-- COMPUTER LAB -->
-            <div class="gallery-card"
-                 onclick="openImage('images/gallery6.jpg')">
+    currentImage = index;
 
-                <div class="gallery-image">
-                    <img src="images/gallery6.jpg"
-                         alt="Computer Lab">
-                </div>
+    const box =
+        document.getElementById("lightbox");
 
-                <div class="gallery-caption">
+    box.classList.add("show");
+
+    updateLightbox();
+
+    document.body.style.overflow = "hidden";
+}
+
+function closeLightbox(){
+
+    document
+        .getElementById("lightbox")
+        .classList
+        .remove("show");
+
+    document.body.style.overflow = "";
+}
+
+function changeImage(step){
+
+    currentImage =
+        (currentImage + step + galleryImages.length)
+        % galleryImages.length;
+
+    updateLightbox();
+}
+
+function updateLightbox(){
+
+    const image =
+        galleryImages[currentImage];
+
+    document
+        .getElementById("lightboxImage")
+        .src = image.src;
+
+    document
+        .getElementById("lightboxImage")
+        .alt = image.alt;
+
+    document
+        .getElementById("lightboxCaption")
+        .textContent = image.alt;
+}
+
+
+/* =========================
+   ADMISSION FORM
+========================= */
+
+const admissionModal =
+    document.getElementById("admissionModal");
+
+const admissionForm =
+    document.getElementById("studentAdmissionForm");
+
+const courseSelect =
+    document.getElementById("courseSelect");
+
+
+function openAdmissionForm(course = ""){
+
+    if(course){
+        courseSelect.value = course;
+    }
+
+    admissionModal.classList.add("show");
+
+    admissionModal.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    document.body.style.overflow = "hidden";
+
+    setTimeout(function(){
+
+        admissionForm
+            .querySelector('[name="name"]')
+            .focus();
+
+    },100);
+}
+
+
+function closeAdmissionForm(){
+
+    admissionModal.classList.remove("show");
+
+    admissionModal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body.style.overflow = "";
+}
+
+
+/* ALL APPLY NOW BUTTONS */
+
+document
+    .querySelectorAll(".open-admission")
+    .forEach(function(button){
+
+        button.addEventListener(
+            "click",
+            function(event){
+
+                event.preventDefault();
+
+                openAdmissionForm(
+                    button.dataset.course || ""
+                );
+            }
+        );
+
+    });
+
+
+/* FORM SUBMIT TO WHATSAPP */
+
+admissionForm.addEventListener(
+    "submit",
+    function(event){
+
+        event.preventDefault();
+
+        if(!admissionForm.checkValidity()){
+
+            admissionForm.reportValidity();
+
+            return;
+        }
+
+        const data =
+            new FormData(admissionForm);
+
+        const message =
+            "🎓 *NEW STUDENT ADMISSION FORM*\n\n" +
+
+            "👤 *Student Name:* " +
+            data.get("name") + "\n\n" +
+
+            "👨 *Father's Name:* " +
+            data.get("father") + "\n\n" +
+
+            "📱 *Mobile:* " +
+            data.get("mobile") + "\n\n" +
+
+            "📧 *Email:* " +
+            (data.get("email") || "-") + "\n\n" +
+
+            "📚 *Course:* " +
+            data.get("course") + "\n\n" +
+
+            "🎓 *Qualification:* " +
+            data.get("qualification") + "\n\n" +
+
+            "📍 *Address:* " +
+            data.get("address") + "\n\n" +
+
+            "📝 *Message:* " +
+            (data.get("message") || "-");
+
+        const whatsappURL =
+            "https://wa.me/917231905659?text=" +
+            encodeURIComponent(message);
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+        closeAdmissionForm();
+
+    }
+);
+
+
+/* CLOSE POPUP OUTSIDE */
+
+admissionModal.addEventListener(
+    "click",
+    function(event){
+
+        if(event.target === admissionModal){
+
+            closeAdmissionForm();
+
+        }
+
+    }
+);
+
+
+/* CLOSE LIGHTBOX OUTSIDE */
+
+document
+    .getElementById("lightbox")
+    .addEventListener(
+        "click",
+        function(event){
+
+            if(event.target.id === "lightbox"){
+
+                closeLightbox();
+
+            }
+
+        }
+    );
+
+
+/* KEYBOARD CONTROLS */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            closeAdmissionForm();
+            closeLightbox();
+
+        }
+
+        if(
+            document
+                .getElementById("lightbox")
+                .classList
+                .contains("show")
+        ){
+
+            if(event.key === "ArrowLeft"){
+                changeImage(-1);
+            }
+
+            if(event.key === "ArrowRight"){
+                changeImage(1);
+            }
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
