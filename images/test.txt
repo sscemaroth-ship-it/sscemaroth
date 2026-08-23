@@ -1,14 +1,16 @@
-sscemaroth/
+ssce-website/
 │
 ├── index.html
 │
 └── images/
-    ├── ram.jpg
-    ├── ganesh.jpg
-    ├── shyam.jpg
-    ├── front.jpg
-    ├── lab.jpg
-    ├── class.jpg
-    ├── office.jpg
-    ├── center.jpg
-    └── student.jpg
+    │
+    ├── header-ram.jpg
+    ├── header-ganesh.jpg
+    ├── header-shyambaba.jpg
+    │
+    ├── gallery-center-front.jpg
+    ├── gallery-office-view.jpg
+    ├── gallery-computer-lab.jpg
+    ├── gallery-computer-class.jpg
+    ├── gallery-lab-2.jpg
+    └── gallery-lab-3.jpg
