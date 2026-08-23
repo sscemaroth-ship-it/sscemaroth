@@ -1,1970 +1,1318 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SHREE SHYAM COMPUTER EDUCATION | SSCE</title>
-
-<meta name="description" content="SHREE SHYAM COMPUTER EDUCATION - Computer Courses, RS-CIT, Digital Skills and Online Services">
-<meta name="theme-color" content="#075c32">
-
-<style>
-:root{
-    --dark:#033d20;
-    --green:#075c32;
-    --light-green:#eaf7ee;
-    --gold:#f6c343;
-    --gold-light:#ffe9a6;
-    --white:#ffffff;
-    --text:#18231d;
-    --gray:#66736b;
-    --shadow:0 15px 40px rgba(0,60,30,.12);
-}
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial,"Noto Sans Devanagari",sans-serif;
-    color:var(--text);
-    background:#f6faf7;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-button,
-input,
-select,
-textarea{
-    font-family:inherit;
-}
-
-/* TOP BAR */
-
-.top{
-    background:var(--dark);
-    color:#fff;
-    padding:8px 6%;
-    display:flex;
-    justify-content:space-between;
-    gap:15px;
-    font-size:13px;
-}
-
-/* HEADER */
-
-header{
-    background:#fff;
-    padding:18px 6%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-    box-shadow:0 4px 20px rgba(0,0,0,.06);
-}
-
-.brand{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.logo{
-    width:82px;
-    height:82px;
-    display:grid;
-    place-items:center;
-    border:2px solid var(--gold);
-    border-radius:50%;
-    background:linear-gradient(135deg,var(--dark),var(--green));
-    color:#fff;
-    font-size:22px;
-    font-weight:900;
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-}
-
-.brand h1{
-    color:var(--dark);
-    font-size:clamp(22px,3vw,32px);
-    line-height:1.1;
-}
-
-.brand h1 span{
-    display:block;
-    color:var(--green);
-    font-size:clamp(18px,2.5vw,25px);
-    margin-top:4px;
-}
-
-.center-code{
-    display:inline-block;
-    margin-top:9px;
-    padding:5px 14px;
-    border-radius:20px;
-    background:var(--green);
-    color:#fff;
-    font-size:13px;
-    font-weight:bold;
-}
-
-.contacts{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:18px;
-    flex-wrap:wrap;
-    font-weight:bold;
-}
-
-.enquiry-btn,
-.btn{
-    display:inline-block;
-    border:none;
-    cursor:pointer;
-    padding:13px 22px;
-    border-radius:10px;
-    font-weight:bold;
-    transition:.25s;
-}
-
-.enquiry-btn,
-.primary{
-    background:linear-gradient(135deg,var(--gold),#ffd970);
-    color:#26321f;
-}
-
-.btn:hover,
-.enquiry-btn:hover{
-    transform:translateY(-2px);
-}
-
-/* NAVIGATION */
-
-nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:linear-gradient(90deg,var(--dark),var(--green),var(--dark));
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    padding:0 5%;
-    box-shadow:0 3px 12px rgba(0,0,0,.15);
-}
-
-nav a{
-    color:#fff;
-    padding:15px 20px;
-    border-bottom:3px solid transparent;
-    font-size:14px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    background:rgba(255,255,255,.08);
-    border-bottom-color:var(--gold);
-}
-
-/* HERO */
-
-.hero{
-    min-height:570px;
-    padding:55px 7%;
-    background:
-        radial-gradient(circle at 80% 20%,rgba(255,255,255,.18),transparent 22%),
-        linear-gradient(115deg,#003d20,#075c32,#0a8c4b);
-    color:#fff;
-    display:flex;
-    align-items:center;
-    gap:40px;
-}
-
-.hero-text{
-    width:55%;
-}
-
-.welcome{
-    letter-spacing:5px;
-    color:#d8ffe6;
-    font-size:14px;
-}
-
-.hero h2{
-    font-size:clamp(38px,5vw,68px);
-    line-height:1.05;
-    margin:12px 0;
-}
-
-.gold{
-    color:var(--gold);
-}
-
-.hindi{
-    font-size:clamp(19px,2.5vw,25px);
-    font-weight:bold;
-}
-
-.lead{
-    margin-top:20px;
-    font-size:18px;
-    color:#e2f6e9;
-}
-
-.buttons{
-    margin-top:28px;
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
-}
-
-.outline{
-    border:1px solid #fff;
-    background:rgba(255,255,255,.10);
-    color:#fff;
-}
-
-/* DIVINE HEADER PHOTOS */
-
-.visual{
-    width:45%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.divine-photos{
-    width:min(100%,560px);
-    display:grid;
-    grid-template-columns:1fr 1.15fr 1fr;
-    align-items:start;
-    gap:10px;
-}
-
-.divine-photo{
-    overflow:hidden;
-    border-radius:18px;
-    border:2px solid var(--gold);
-    background:transparent;
-    box-shadow:0 12px 30px rgba(0,0,0,.25);
-}
-
-.divine-photo.center{
-    border-width:3px;
-}
-
-.divine-photo img{
-    width:100%;
-    height:auto;
-    display:block;
-    object-fit:contain;
-    background:#10261a;
-}
-
-/* SECTIONS */
-
-section{
-    padding:75px 7%;
-}
-
-.title{
-    text-align:center;
-    margin-bottom:48px;
-}
-
-.title h2{
-    font-size:clamp(30px,4vw,42px);
-    color:var(--dark);
-}
-
-.title span{
-    color:#d9a51d;
-}
-
-.title p{
-    color:var(--gray);
-}
-
-/* COURSES */
-
-.courses{
-    background:#fff;
-}
-
-.grid4{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
-}
-
-.card{
-    background:#fff;
-    border:1px solid #d9e8dd;
-    border-radius:20px;
-    padding:28px 20px;
-    text-align:center;
-    box-shadow:var(--shadow);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.icon{
-    width:76px;
-    height:76px;
-    margin:-60px auto 18px;
-    position:relative;
-    top:35px;
-    border-radius:50%;
-    display:grid;
-    place-items:center;
-    background:linear-gradient(135deg,var(--dark),var(--green));
-    color:#fff;
-    border:3px solid var(--gold);
-    font-size:32px;
-}
-
-.card h3{
-    margin-top:32px;
-    color:var(--dark);
-    font-size:21px;
-}
-
-.card p{
-    color:var(--gray);
-    margin:12px 0 20px;
-}
-
-.apply{
-    display:block;
-    width:100%;
-    border:none;
-    cursor:pointer;
-    background:var(--green);
-    color:#fff;
-    padding:13px;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-/* INFORMATION */
-
-.info{
-    display:grid;
-    grid-template-columns:1.25fr .9fr 1fr;
-    gap:22px;
-    background:var(--light-green);
-}
-
-.box{
-    background:#fff;
-    padding:32px;
-    border-radius:22px;
-    box-shadow:var(--shadow);
-}
-
-.services{
-    background:linear-gradient(145deg,var(--dark),var(--green));
-    color:#fff;
-}
-
-.tag{
-    display:inline-block;
-    background:var(--gold);
-    color:#24311f;
-    padding:8px 14px;
-    border-radius:8px;
-    font-weight:bold;
-    margin:15px 0;
-}
-
-.service-list{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-    font-size:14px;
-}
-
-.service-list div:before{
-    content:"✓ ";
-    color:#aaffc0;
-    font-weight:bold;
-}
-
-.admission{
-    text-align:center;
-}
-
-.admission .big{
-    font-size:50px;
-}
-
-.why ul{
-    list-style:none;
-}
-
-.why li{
-    padding:11px 0;
-    border-bottom:1px solid #edf2ee;
-}
-
-.why li:before{
-    content:"✓";
-    color:var(--green);
-    margin-right:10px;
-}
-
-/* ABOUT */
-
-.about{
-    background:linear-gradient(135deg,#043d21,#087541);
-    color:#fff;
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1.1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.about h2{
-    font-size:35px;
-    margin-bottom:18px;
-}
-
-.about p{
-    color:#ddf7e5;
-    font-size:17px;
-}
-
-.features{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-.feature{
-    padding:20px;
-    border-radius:14px;
-    background:rgba(255,255,255,.10);
-    border:1px solid rgba(255,255,255,.18);
-}
-
-.feature strong{
-    display:block;
-    color:var(--gold);
-    margin-bottom:6px;
-}
-
-/* ADMISSION STEPS */
-
-.steps{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.step{
-    padding:28px;
-    text-align:center;
-    border-radius:18px;
-    background:#f8fcf9;
-    border:1px solid #dcece0;
-    box-shadow:var(--shadow);
-}
-
-.num{
-    width:50px;
-    height:50px;
-    margin:auto auto 15px;
-    border-radius:50%;
-    display:grid;
-    place-items:center;
-    background:var(--green);
-    color:#fff;
-    font-size:20px;
-    font-weight:bold;
-}
-
-/* GALLERY */
-
-.gallery{
-    background:linear-gradient(180deg,#f6faf7,#fff);
-}
-
-.gallery-grid{
-    max-width:1250px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.gallery-item{
-    background:#fff;
-    border-radius:20px;
-    overflow:hidden;
-    border:1px solid #d9e8dd;
-    box-shadow:var(--shadow);
-    cursor:pointer;
-    transition:.3s;
-}
-
-.gallery-item:hover{
-    transform:translateY(-8px);
-}
-
-.gallery-item img{
-    width:100%;
-    height:250px;
-    display:block;
-    object-fit:cover;
-    transition:.4s;
-}
-
-.gallery-item:hover img{
-    transform:scale(1.06);
-}
-
-.gallery-item figcaption{
-    padding:15px;
-    font-weight:bold;
-    color:var(--dark);
-    text-align:center;
-}
-
-/* LIGHTBOX */
-
-.lightbox{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.94);
-    z-index:10000;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:40px 70px;
-}
-
-.lightbox.show{
-    display:flex;
-}
-
-.lightbox img{
-    max-width:92vw;
-    max-height:82vh;
-    object-fit:contain;
-    border:3px solid var(--gold);
-    border-radius:14px;
-}
-
-.lightbox-close,
-.lightbox-nav{
-    position:absolute;
-    border:none;
-    color:#fff;
-    cursor:pointer;
-    background:rgba(255,255,255,.14);
-    display:grid;
-    place-items:center;
-}
-
-.lightbox-close{
-    top:20px;
-    right:25px;
-    width:48px;
-    height:48px;
-    border-radius:50%;
-    font-size:32px;
-}
-
-.lightbox-nav{
-    top:50%;
-    transform:translateY(-50%);
-    width:52px;
-    height:70px;
-    border-radius:12px;
-    font-size:28px;
-}
-
-.lightbox-nav.prev{
-    left:20px;
-}
-
-.lightbox-nav.next{
-    right:20px;
-}
-
-.lightbox-caption{
-    position:absolute;
-    bottom:22px;
-    left:50%;
-    transform:translateX(-50%);
-    color:#fff;
-    background:rgba(0,0,0,.55);
-    padding:9px 16px;
-    border-radius:20px;
-    text-align:center;
-}
-
-/* CONTACT */
-
-.contact{
-    background:#fff;
-}
-
-.contact-box{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:35px;
-    background:#fff;
-    padding:35px;
-    border-radius:22px;
-    box-shadow:var(--shadow);
-}
-
-.contact-box h3{
-    color:var(--dark);
-    font-size:28px;
-    margin-bottom:18px;
-}
-
-.contact-box p{
-    margin:12px 0;
-}
-
-.map-box{
-    overflow:hidden;
-    border-radius:18px;
-    border:1px solid #d9e8dd;
-    min-height:360px;
-}
-
-.map-box iframe{
-    width:100%;
-    height:360px;
-    border:0;
-    display:block;
-}
-
-.call,
-.whatsapp{
-    display:inline-block;
-    padding:13px 20px;
-    border-radius:8px;
-    color:#fff;
-    font-weight:bold;
-    margin:15px 8px 0 0;
-}
-
-.call{
-    background:var(--green);
-}
-
-.whatsapp{
-    background:#25a657;
-}
-
-/* FOOTER */
-
-footer{
-    background:#022f19;
-    color:#fff;
-    padding:50px 7% 20px;
-}
-
-.foot{
-    display:grid;
-    grid-template-columns:1.4fr 1fr 1fr 1fr;
-    gap:30px;
-    padding-bottom:25px;
-    border-bottom:1px solid rgba(255,255,255,.18);
-}
-
-footer h3{
-    color:var(--gold);
-    margin-bottom:12px;
-}
-
-footer p,
-footer li{
-    color:#c9dfd0;
-    font-size:14px;
-    margin:7px 0;
-    list-style:none;
-}
-
-.copy{
-    text-align:center;
-    color:#aac4b3;
-    padding-top:20px;
-    font-size:13px;
-}
-
-/* FLOATING BUTTONS */
-
-.float{
-    position:fixed;
-    bottom:20px;
-    z-index:2000;
-    padding:13px 18px;
-    border-radius:30px;
-    color:#fff;
-    font-weight:bold;
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
-}
-
-.fcall{
-    left:20px;
-    background:var(--green);
-}
-
-.fwa{
-    right:20px;
-    background:#25a657;
-}
-
-/* ADMISSION POPUP */
-
-.admission-modal{
-    position:fixed;
-    inset:0;
-    background:rgba(12,25,18,.75);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:18px;
-    z-index:15000;
-}
-
-.admission-modal.show{
-    display:flex;
-}
-
-.admission-form-box{
-    width:min(700px,100%);
-    max-height:92vh;
-    overflow:auto;
-    background:#fff;
-    border:3px solid var(--gold);
-    border-radius:22px;
-    padding:30px;
-    position:relative;
-    box-shadow:0 25px 80px rgba(0,0,0,.35);
-}
-
-.admission-form-box h2{
-    margin-bottom:6px;
-    color:var(--dark);
-    font-size:28px;
-}
-
-.admission-form-box p{
-    margin-bottom:20px;
-    color:var(--gray);
-}
-
-.form-close{
-    position:absolute;
-    right:16px;
-    top:12px;
-    border:none;
-    background:#f1f4f1;
-    color:#333;
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    font-size:25px;
-    cursor:pointer;
-}
-
-.student-form{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:14px;
-}
-
-.student-form .full{
-    grid-column:1/-1;
-}
-
-.student-form label{
-    display:block;
-    font-size:13px;
-    font-weight:bold;
-    color:#334;
-    margin-bottom:6px;
-}
-
-.student-form input,
-.student-form select,
-.student-form textarea{
-    width:100%;
-    border:1px solid #cfd9d2;
-    border-radius:10px;
-    padding:12px 13px;
-    font-size:15px;
-    outline:none;
-}
-
-.student-form input:focus,
-.student-form select:focus,
-.student-form textarea:focus{
-    border-color:var(--green);
-    box-shadow:0 0 0 3px rgba(7,92,50,.12);
-}
-
-.student-form textarea{
-    min-height:82px;
-    resize:vertical;
-}
-
-.form-note{
-    font-size:12px;
-    color:var(--gray);
-    margin-top:10px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:1000px){
-
-    header,
-    .hero{
-        flex-direction:column;
-        text-align:center;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SHREE SHYAM COMPUTER EDUCATION | SSCE MAROTH</title>
+
+  <style>
+    :root{
+      --green:#063d27;
+      --green2:#0b5c3a;
+      --lightgreen:#eaf7e8;
+      --gold:#d6a400;
+      --gold2:#f2c94c;
+      --white:#ffffff;
+      --dark:#17231c;
+      --cream:#fffdf5;
+      --shadow:0 10px 30px rgba(0,0,0,.12);
     }
 
-    .contacts{
-        justify-content:center;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
     }
 
-    .hero-text,
-    .visual{
-        width:100%;
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg,#fffdf7,#f2faef);
+      color:#1d2a23;
+      overflow-x:hidden;
     }
 
-    .grid4{
-        grid-template-columns:repeat(2,1fr);
+    img{
+      width:100%;
+      display:block;
     }
 
-    .info,
-    .about-grid,
-    .contact-box{
-        grid-template-columns:1fr;
+    a{
+      text-decoration:none;
+      color:inherit;
     }
 
-    .steps{
-        grid-template-columns:repeat(2,1fr);
+    /* TOP BAR */
+    .topbar{
+      background:#032819;
+      color:white;
+      border-top:3px solid var(--gold);
+      border-bottom:2px solid var(--gold);
+      min-height:58px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:10px 30px;
+      gap:20px;
+      font-weight:bold;
     }
 
-    .foot{
-        grid-template-columns:1fr 1fr;
+    .top-left,
+    .top-center,
+    .top-right{
+      display:flex;
+      align-items:center;
+      gap:10px;
     }
 
-    .gallery-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media(max-width:650px){
-
-    .top{
-        justify-content:center;
-        text-align:center;
+    .top-center{
+      color:var(--gold2);
+      font-size:25px;
+      font-weight:800;
+      white-space:nowrap;
     }
 
-    .top span:last-child{
-        display:none;
+    .top-right{
+      font-size:16px;
+      white-space:nowrap;
     }
 
+    /* MAIN HEADER */
     header{
-        padding:14px;
+      background:linear-gradient(135deg,#fff,#f5f7f1,#fff);
+      border-bottom:3px solid var(--gold);
     }
 
-    .brand{
-        flex-direction:column;
-        text-align:center;
+    .main-header{
+      max-width:1600px;
+      margin:auto;
+      min-height:250px;
+      padding:22px 30px;
+      display:grid;
+      grid-template-columns:180px 1fr 300px;
+      gap:25px;
+      align-items:center;
     }
 
-    .brand h1{
-        font-size:22px;
-    }
-
-    .brand h1 span{
-        font-size:18px;
+    .logo-wrap{
+      display:flex;
+      justify-content:center;
+      align-items:center;
     }
 
     .logo{
-        width:68px;
-        height:68px;
-        font-size:18px;
+      width:160px;
+      height:160px;
+      border-radius:50%;
+      background:radial-gradient(circle,#145237,#022918);
+      border:5px solid var(--gold);
+      box-shadow:0 0 0 10px #fff,0 0 0 12px var(--gold);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:bold;
+      position:relative;
     }
 
+    .logo::before{
+      content:"✦";
+      position:absolute;
+      top:-38px;
+      color:var(--gold);
+      font-size:35px;
+    }
+
+    .logo-icon{
+      font-size:45px;
+      margin-bottom:8px;
+    }
+
+    .logo-text{
+      font-size:27px;
+      letter-spacing:2px;
+    }
+
+    .branding{
+      text-align:center;
+    }
+
+    .center-name{
+      font-size:clamp(34px,5vw,70px);
+      line-height:1;
+      letter-spacing:-2px;
+      font-weight:900;
+      color:#082d1c;
+      white-space:nowrap;
+      margin-bottom:14px;
+    }
+
+    .hindi-name{
+      color:#c88700;
+      font-size:clamp(28px,4vw,54px);
+      font-weight:900;
+      line-height:1.15;
+      margin-bottom:14px;
+    }
+
+    .code-badge{
+      display:inline-block;
+      background:#052b1a;
+      color:white;
+      border:2px solid var(--gold);
+      padding:10px 28px;
+      border-radius:30px;
+      font-size:22px;
+      font-weight:bold;
+      box-shadow:var(--shadow);
+    }
+
+    .contact-box{
+      border-left:2px solid var(--gold);
+      padding-left:22px;
+    }
+
+    .contact-line{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin:16px 0;
+      font-size:16px;
+      font-weight:bold;
+      white-space:nowrap;
+    }
+
+    .contact-icon{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      background:#063d27;
+      color:white;
+      display:grid;
+      place-items:center;
+      font-size:20px;
+      flex-shrink:0;
+    }
+
+    .enquiry-btn{
+      margin-top:15px;
+      width:100%;
+      border:none;
+      cursor:pointer;
+      padding:16px;
+      border-radius:10px;
+      background:linear-gradient(135deg,#e6b000,#9a6500);
+      color:white;
+      font-size:19px;
+      font-weight:bold;
+      box-shadow:var(--shadow);
+      transition:.3s;
+    }
+
+    .enquiry-btn:hover{
+      transform:translateY(-2px);
+    }
+
+    /* NAVIGATION */
     nav{
-        justify-content:flex-start;
-        flex-wrap:nowrap;
-        overflow-x:auto;
+      background:#032b1a;
+      color:white;
+      border-bottom:3px solid var(--gold);
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    .nav-wrap{
+      max-width:1600px;
+      margin:auto;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
     }
 
     nav a{
-        white-space:nowrap;
-        padding:12px 11px;
-        font-size:12px;
+      padding:20px 26px;
+      font-weight:bold;
+      font-size:16px;
+      border-right:1px solid rgba(214,164,0,.5);
+      transition:.3s;
     }
 
+    nav a:hover{
+      color:var(--gold2);
+      background:#052f1d;
+    }
+
+    /* HERO DEVOTIONAL PHOTOS */
+    .photo-section{
+      padding:18px 20px 10px;
+      background:
+        linear-gradient(90deg,rgba(234,247,232,.8),#fff,rgba(234,247,232,.8));
+    }
+
+    .photo-grid{
+      max-width:1180px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+    }
+
+    .dev-card{
+      background:#fff;
+      padding:8px;
+      border:3px solid var(--gold);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .dev-card img{
+      height:310px;
+      object-fit:cover;
+      object-position:center;
+      border-radius:17px;
+    }
+
+    .photo-caption{
+      background:#05341f;
+      color:var(--gold2);
+      border:2px solid var(--gold);
+      margin:-45px 35px 0;
+      position:relative;
+      padding:10px;
+      text-align:center;
+      border-radius:20px;
+      font-size:20px;
+      font-weight:bold;
+    }
+
+    /* SECTION */
     section{
-        padding:60px 5%;
+      padding:70px 20px;
     }
 
-    .hero{
-        padding:50px 6%;
+    .section-title{
+      text-align:center;
+      font-size:42px;
+      color:#082d1c;
+      margin-bottom:12px;
+      font-weight:900;
     }
 
-    .divine-photos{
-        gap:5px;
+    .section-subtitle{
+      text-align:center;
+      color:#5c6b62;
+      margin-bottom:40px;
+      font-size:18px;
     }
 
-    .divine-photo{
-        border-radius:10px;
-        border-width:1px;
+    /* ABOUT */
+    .about{
+      background:var(--cream);
     }
 
-    .grid4,
-    .steps,
-    .features,
-    .gallery-grid,
-    .student-form{
-        grid-template-columns:1fr;
+    .about-box{
+      max-width:1100px;
+      margin:auto;
+      background:white;
+      border:1px solid #e6d58d;
+      border-radius:20px;
+      padding:35px;
+      box-shadow:var(--shadow);
+      line-height:1.9;
+      font-size:17px;
+      text-align:center;
     }
 
-    .student-form .full{
-        grid-column:auto;
+    /* COURSES */
+    .courses{
+      background:#f7fcf5;
     }
 
-    .service-list{
-        grid-template-columns:1fr;
+    .course-grid{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
     }
 
-    .foot{
-        grid-template-columns:1fr;
+    .course-card{
+      background:white;
+      border:1px solid #e7dca8;
+      border-radius:22px;
+      padding:32px 25px;
+      text-align:center;
+      box-shadow:var(--shadow);
+      transition:.3s;
     }
 
-    .gallery-item img{
-        height:240px;
+    .course-card:hover{
+      transform:translateY(-7px);
     }
 
-    .admission-form-box{
-        padding:24px 18px;
+    .course-icon{
+      width:78px;
+      height:78px;
+      margin:0 auto 20px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:#063d27;
+      border:3px solid var(--gold);
+      color:white;
+      font-size:32px;
     }
 
+    .course-card h3{
+      color:#26362d;
+      font-size:23px;
+      margin-bottom:15px;
+    }
+
+    .course-card p{
+      color:#66736b;
+      line-height:1.7;
+      min-height:58px;
+    }
+
+    .apply-btn{
+      width:100%;
+      margin-top:22px;
+      padding:14px;
+      border:none;
+      border-radius:9px;
+      background:linear-gradient(135deg,#0c6641,#053b25);
+      color:white;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    /* SERVICES */
+    .services{
+      background:linear-gradient(135deg,#fff,#f7fbf4);
+    }
+
+    .service-grid{
+      max-width:1500px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:15px;
+    }
+
+    .service-card{
+      background:white;
+      border:1px solid #dfe5db;
+      border-radius:18px;
+      padding:28px 18px;
+      text-align:center;
+      box-shadow:0 5px 18px rgba(0,0,0,.07);
+    }
+
+    .service-card .service-icon{
+      width:78px;
+      height:78px;
+      border-radius:50%;
+      background:#063d27;
+      color:white;
+      border:3px solid var(--gold);
+      display:grid;
+      place-items:center;
+      margin:0 auto 18px;
+      font-size:28px;
+    }
+
+    .service-card h4{
+      margin-bottom:12px;
+      font-size:16px;
+    }
+
+    .service-card p{
+      font-size:14px;
+      line-height:1.6;
+      color:#56625b;
+    }
+
+    /* GALLERY */
+    .gallery{
+      background:#fffdf7;
+    }
+
+    .gallery-grid{
+      max-width:1300px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+    }
+
+    .gallery-card{
+      background:white;
+      border:2px solid var(--gold);
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      cursor:pointer;
+    }
+
+    .gallery-card img{
+      height:250px;
+      object-fit:cover;
+    }
+
+    .gallery-caption{
+      padding:16px;
+      text-align:center;
+      font-weight:bold;
+      font-size:18px;
+      color:#063d27;
+    }
+
+    /* ADMISSION */
+    .admission{
+      background:linear-gradient(135deg,#053d26,#0d7548);
+      color:white;
+      text-align:center;
+    }
+
+    .admission .section-title{
+      color:var(--gold2);
+    }
+
+    .admission-box{
+      max-width:850px;
+      margin:auto;
+    }
+
+    .admission-box p{
+      font-size:18px;
+      line-height:1.8;
+    }
+
+    .big-apply{
+      margin-top:25px;
+      background:linear-gradient(135deg,#f3c94e,#b67c00);
+      color:#173020;
+      border:none;
+      border-radius:12px;
+      padding:18px 35px;
+      font-size:19px;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    /* CONTACT */
+    .contact-section{
+      background:#f7fbf4;
+    }
+
+    .contact-grid{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+    }
+
+    .contact-card,
+    .map-card{
+      background:white;
+      border-radius:20px;
+      padding:30px;
+      box-shadow:var(--shadow);
+      border:1px solid #e7dca8;
+    }
+
+    .contact-card h3{
+      color:#063d27;
+      margin-bottom:20px;
+      font-size:25px;
+    }
+
+    .contact-card p{
+      margin:14px 0;
+      line-height:1.7;
+    }
+
+    .map-btn{
+      display:inline-block;
+      margin-top:15px;
+      background:#063d27;
+      color:white;
+      padding:14px 22px;
+      border-radius:8px;
+      font-weight:bold;
+    }
+
+    .map-card iframe{
+      width:100%;
+      height:330px;
+      border:0;
+      border-radius:14px;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#021f13;
+      color:white;
+      text-align:center;
+      padding:28px 20px;
+      border-top:3px solid var(--gold);
+    }
+
+    footer p{
+      margin:7px 0;
+    }
+
+    /* FLOATING BUTTONS */
+    .floating-whatsapp,
+    .floating-call{
+      position:fixed;
+      bottom:22px;
+      z-index:1000;
+      padding:14px 22px;
+      border-radius:30px;
+      color:white;
+      font-weight:bold;
+      box-shadow:var(--shadow);
+    }
+
+    .floating-whatsapp{
+      right:20px;
+      background:#168a4d;
+    }
+
+    .floating-call{
+      left:20px;
+      background:#0b5c3a;
+    }
+
+    /* MODAL */
+    .modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.7);
+      z-index:3000;
+      padding:20px;
+      overflow-y:auto;
+    }
+
+    .modal-content{
+      max-width:650px;
+      margin:40px auto;
+      background:white;
+      border-radius:22px;
+      padding:30px;
+      position:relative;
+      box-shadow:0 20px 60px rgba(0,0,0,.4);
+    }
+
+    .close-modal{
+      position:absolute;
+      top:12px;
+      right:18px;
+      font-size:30px;
+      cursor:pointer;
+      color:#444;
+    }
+
+    .modal-content h2{
+      color:#063d27;
+      margin-bottom:8px;
+    }
+
+    .modal-content .small-text{
+      color:#6b756f;
+      margin-bottom:20px;
+    }
+
+    form{
+      display:grid;
+      gap:15px;
+    }
+
+    input,
+    select,
+    textarea{
+      width:100%;
+      padding:14px;
+      border:1px solid #ccd6ce;
+      border-radius:9px;
+      font-size:16px;
+      outline:none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus{
+      border-color:var(--gold);
+      box-shadow:0 0 0 3px rgba(214,164,0,.12);
+    }
+
+    textarea{
+      min-height:100px;
+      resize:vertical;
+    }
+
+    .submit-btn{
+      border:none;
+      padding:16px;
+      border-radius:10px;
+      background:#11874a;
+      color:white;
+      font-weight:bold;
+      font-size:17px;
+      cursor:pointer;
+    }
+
+    /* LIGHTBOX */
     .lightbox{
-        padding:25px 12px;
+      display:none;
+      position:fixed;
+      inset:0;
+      z-index:4000;
+      background:rgba(0,0,0,.92);
+      padding:25px;
+      align-items:center;
+      justify-content:center;
     }
 
     .lightbox img{
-        max-width:100%;
-        max-height:76vh;
+      max-width:95%;
+      max-height:90vh;
+      width:auto;
+      border-radius:12px;
+      border:3px solid var(--gold);
     }
 
-    .lightbox-nav{
-        width:42px;
-        height:58px;
+    .lightbox-close{
+      position:absolute;
+      top:20px;
+      right:30px;
+      color:white;
+      font-size:40px;
+      cursor:pointer;
     }
 
-    .lightbox-nav.prev{
-        left:6px;
+    /* MOBILE */
+    @media(max-width:1100px){
+      .main-header{
+        grid-template-columns:140px 1fr;
+      }
+
+      .contact-box{
+        grid-column:1/-1;
+        border-left:none;
+        border-top:2px solid var(--gold);
+        padding:18px 0 0;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+      }
+
+      .enquiry-btn{
+        grid-column:1/-1;
+      }
+
+      .service-grid{
+        grid-template-columns:repeat(3,1fr);
+      }
     }
 
-    .lightbox-nav.next{
-        right:6px;
+    @media(max-width:850px){
+      .topbar{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .top-center{
+        font-size:22px;
+      }
+
+      .main-header{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .contact-box{
+        grid-column:auto;
+      }
+
+      .center-name{
+        white-space:normal;
+        letter-spacing:-1px;
+      }
+
+      .photo-grid,
+      .course-grid,
+      .gallery-grid,
+      .contact-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .service-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .dev-card img{
+        height:280px;
+      }
     }
 
-    .float{
-        font-size:12px;
-        padding:11px 14px;
-    }
-}
+    @media(max-width:560px){
+      .top-left,
+      .top-right{
+        font-size:13px;
+      }
 
-</style>
+      .top-center{
+        font-size:18px;
+      }
+
+      .main-header{
+        padding:20px 15px;
+      }
+
+      .logo{
+        width:125px;
+        height:125px;
+      }
+
+      .center-name{
+        font-size:35px;
+      }
+
+      .hindi-name{
+        font-size:31px;
+      }
+
+      .photo-grid,
+      .course-grid,
+      .gallery-grid,
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+
+      .service-grid{
+        grid-template-columns:1fr;
+      }
+
+      .contact-box{
+        display:block;
+      }
+
+      .dev-card img{
+        height:320px;
+      }
+
+      nav a{
+        padding:14px 13px;
+        font-size:13px;
+      }
+
+      .section-title{
+        font-size:32px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="top">
-    <span>🎓 Empowering Students. Building Better Futures.</span>
-    <span>Computer Education | Digital Skills | Student Support</span>
-</div>
-
-<header>
-
-    <div class="brand">
-
-        <div class="logo">SSCE</div>
-
-        <div>
-            <h1>
-                SHREE SHYAM
-                <span>COMPUTER EDUCATION</span>
-            </h1>
-
-            <div class="center-code">
-                Center Code: 32290325
-            </div>
-        </div>
-
+  <!-- TOP HEADER -->
+  <div class="topbar">
+    <div class="top-left">
+      🎓 Empowering Students. Building Better Futures.
     </div>
 
-    <div class="contacts">
-        <span>📞 01586-299472</span>
-        <span>🟢 7231905659</span>
-        <a class="enquiry-btn open-admission"
-           href="#admission"
-           data-course="">
-           📝 ENQUIRY NOW
-        </a>
+    <div class="top-center">
+      ❖ ॥ श्री गणेशाय नमः ॥ ❖
     </div>
 
-</header>
-
-<nav>
-    <a href="#home">🏠 Home</a>
-    <a href="#about">🏫 About Us</a>
-    <a href="#courses">📚 Courses</a>
-    <a href="#services">🌐 Services</a>
-    <a href="#gallery">📸 Gallery</a>
-    <a href="#admission">🎓 Admission</a>
-    <a href="#contact">📍 Contact</a>
-</nav>
-
-<!-- HOME -->
-
-<section class="hero" id="home">
-
-    <div class="hero-text">
-
-        <div class="welcome">WELCOME TO</div>
-
-        <h2>
-            SHREE SHYAM<br>
-            <span class="gold">COMPUTER EDUCATION</span>
-        </h2>
-
-        <div class="hindi">
-            <span class="gold">
-                श्री श्याम कंप्यूटर एजुकेशन
-            </span>
-            में आपका स्वागत है।
-        </div>
-
-        <div class="lead">
-            <strong>Learn Computer Skills for a Better Future</strong>
-            <br>
-            बेहतर भविष्य के लिए कंप्यूटर कौशल सीखें।
-        </div>
-
-        <div class="buttons">
-
-            <a class="btn primary" href="#courses">
-                📚 EXPLORE COURSES
-            </a>
-
-            <button type="button"
-                    class="btn outline open-admission"
-                    data-course="">
-                📝 APPLY NOW / आवेदन करें
-            </button>
-
-        </div>
-
+    <div class="top-right">
+      🕘 Mon - Sat : 9:00 AM - 7:00 PM
     </div>
+  </div>
 
-    <!-- RAMJI LEFT - GANESHJI CENTER - SHYAM BABA RIGHT -->
+  <!-- MAIN HEADER -->
+  <header>
+    <div class="main-header">
 
-    <div class="visual">
+      <div class="logo-wrap">
+        <div class="logo">
+          <div class="logo-icon">🖥️</div>
+          <div class="logo-text">SSCE</div>
+        </div>
+      </div>
 
-        <div class="divine-photos">
+      <div class="branding">
+        <h1 class="center-name">SHREE SHYAM COMPUTER EDUCATION</h1>
+        <div class="hindi-name">श्री श्याम कम्प्यूटर एजुकेशन</div>
+        <div class="code-badge">Center Code: 32290325</div>
+      </div>
 
-            <div class="divine-photo">
-                <img src="images/ramji.jpg" alt="Shri Ram">
-            </div>
-
-            <div class="divine-photo center">
-                <img src="images/ganeshji.jpg" alt="Shri Ganesh">
-            </div>
-
-            <div class="divine-photo">
-                <img src="images/shyambaba.jpg" alt="Shri Shyam Baba">
-            </div>
-
+      <div class="contact-box">
+        <div class="contact-line">
+          <div class="contact-icon">📞</div>
+          <div>Phone: 01586-299472</div>
         </div>
 
-    </div>
-
-</section>
-
-<!-- COURSES -->
-
-<section class="courses" id="courses">
-
-    <div class="title">
-        <h2>OUR <span>COURSES</span></h2>
-        <p>कंप्यूटर शिक्षा और डिजिटल कौशल के लिए हमारे कोर्स</p>
-    </div>
-
-    <div class="grid4">
-
-        <div class="card">
-
-            <div class="icon">💻</div>
-
-            <h3>RS-CIT REGULAR</h3>
-
-            <p>
-                Computer fundamentals, internet and digital skills.
-            </p>
-
-            <button type="button"
-                    class="apply open-admission"
-                    data-course="RSCIT REGULAR">
-                APPLY NOW
-            </button>
-
+        <div class="contact-line">
+          <div class="contact-icon">🟢</div>
+          <div>Mobile / WhatsApp: 917231905659</div>
         </div>
 
-        <div class="card">
-
-            <div class="icon">🖥️</div>
-
-            <h3>RSCIT WITHOUT STUDY</h3>
-
-            <p>
-                RS-CIT related admission and student support.
-            </p>
-
-            <button type="button"
-                    class="apply open-admission"
-                    data-course="RSCIT WITHOUT STUDY">
-                APPLY NOW
-            </button>
-
+        <div class="contact-line">
+          <div class="contact-icon">✉</div>
+          <div>Email: sscemaroth@gmail.com</div>
         </div>
 
-        <div class="card">
-
-            <div class="icon">📊</div>
-
-            <h3>RSCFA / TALLY</h3>
-
-            <p>
-                Accounting, financial and practical computer skills.
-            </p>
-
-            <button type="button"
-                    class="apply open-admission"
-                    data-course="RSCFA / TALLY">
-                APPLY NOW
-            </button>
-
-        </div>
-
-        <div class="card">
-
-            <div class="icon">⌨️</div>
-
-            <h3>BCC & COMPUTER</h3>
-
-            <p>
-                Basic computer knowledge and practical training.
-            </p>
-
-            <button type="button"
-                    class="apply open-admission"
-                    data-course="BCC">
-                APPLY NOW
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- SERVICES -->
-
-<section class="info" id="services">
-
-    <div class="box services">
-
-        <h2>ONLINE SERVICES</h2>
-
-        <div class="tag">Digital सुविधा केंद्र</div>
-
-        <div class="service-list">
-            <div>Online Forms</div>
-            <div>Scholarship Forms</div>
-            <div>Recruitment Forms</div>
-            <div>Exam Forms</div>
-            <div>Government Services</div>
-            <div>Document Services</div>
-        </div>
-
-    </div>
-
-    <div class="box admission" id="admission">
-
-        <div class="big">🎓</div>
-
-        <h2>ADMISSION OPEN</h2>
-
-        <p>
-            नए प्रवेश के लिए अपना Admission Form भरें।
-        </p>
-
-        <button type="button"
-                class="btn primary open-admission"
-                data-course="">
-            APPLY FOR ADMISSION
+        <button class="enquiry-btn" onclick="openAdmission()">
+          🧑‍🎓 ENQUIRY NOW
         </button>
+      </div>
 
     </div>
+  </header>
 
-    <div class="box why">
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-wrap">
+      <a href="#home">🏠 HOME</a>
+      <a href="#about">👥 ABOUT US</a>
+      <a href="#courses">📖 COURSES</a>
+      <a href="#services">🌐 SERVICES</a>
+      <a href="#gallery">🖼 GALLERY</a>
+      <a href="#admission">🎓 ADMISSION</a>
+      <a href="#contact">📞 CONTACT</a>
+    </div>
+  </nav>
 
-        <h2>WHY CHOOSE SSCE?</h2>
+  <!-- THREE HEADER PHOTOS -->
+  <div class="photo-section" id="home">
+    <div class="photo-grid">
 
-        <ul>
-            <li>Experienced Faculty</li>
-            <li>Practical Computer Training</li>
-            <li>Student Guidance</li>
-            <li>Online Form Assistance</li>
-            <li>Student Support</li>
-            <li>Career-Oriented Learning</li>
-        </ul>
+      <div class="dev-card">
+        <img src="images/ram.jpg" alt="Shri Ram">
+        <div class="photo-caption">श्री राम</div>
+      </div>
+
+      <div class="dev-card">
+        <img src="images/ganesh.jpg" alt="Shri Ganesh">
+        <div class="photo-caption">श्री गणेश</div>
+      </div>
+
+      <div class="dev-card">
+        <img src="images/shyam.jpg" alt="Shri Shyam Baba">
+        <div class="photo-caption">श्री श्याम बाबा</div>
+      </div>
 
     </div>
+  </div>
 
-</section>
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2 class="section-title">ABOUT US</h2>
+    <p class="section-subtitle">श्री श्याम कम्प्यूटर एजुकेशन</p>
 
-<!-- ABOUT -->
+    <div class="about-box">
+      <p>
+        SHREE SHYAM COMPUTER EDUCATION विद्यार्थियों को गुणवत्तापूर्ण
+        कंप्यूटर शिक्षा, डिजिटल कौशल, RS-CIT, RS-CFA / TALLY तथा अन्य
+        रोजगार उपयोगी कम्प्यूटर प्रशिक्षण प्रदान करने के लिए समर्पित है।
+      </p>
+      <p>
+        हमारा उद्देश्य विद्यार्थियों को आधुनिक कम्प्यूटर ज्ञान और व्यावहारिक
+        प्रशिक्षण देकर बेहतर भविष्य के लिए तैयार करना है।
+      </p>
+    </div>
+  </section>
 
-<section class="about" id="about">
+  <!-- COURSES -->
+  <section class="courses" id="courses">
+    <h2 class="section-title">OUR COURSES</h2>
+    <p class="section-subtitle">
+      कम्प्यूटर शिक्षा और डिजिटल कौशल के लिए हमारे कोर्स
+    </p>
 
-    <div class="about-grid">
+    <div class="course-grid">
 
-        <div>
+      <div class="course-card">
+        <div class="course-icon">💻</div>
+        <h3>RS-CIT</h3>
+        <p>
+          Computer fundamentals, internet, digital skills and practical training.
+        </p>
+        <button class="apply-btn" onclick="openAdmission('RS-CIT')">
+          APPLY NOW
+        </button>
+      </div>
 
-            <h2>ABOUT SHREE SHYAM COMPUTER EDUCATION</h2>
+      <div class="course-card">
+        <div class="course-icon">📊</div>
+        <h3>RS-CFA / TALLY</h3>
+        <p>
+          Accounting, financial knowledge and practical Tally training.
+        </p>
+        <button class="apply-btn" onclick="openAdmission('RS-CFA / TALLY')">
+          APPLY NOW
+        </button>
+      </div>
 
-            <p>
-                Shree Shyam Computer Education (SSCE) विद्यार्थियों को
-                आधुनिक कंप्यूटर शिक्षा, डिजिटल कौशल और विभिन्न ऑनलाइन
-                सेवाएँ प्रदान करने के उद्देश्य से कार्यरत है।
-            </p>
-
-            <br>
-
-            <p>
-                हमारा लक्ष्य विद्यार्थियों को तकनीकी रूप से सक्षम बनाकर
-                बेहतर भविष्य के लिए तैयार करना है।
-            </p>
-
-        </div>
-
-        <div class="features">
-
-            <div class="feature">
-                <strong>🎯 Practical Learning</strong>
-                सीखने के साथ प्रैक्टिकल अभ्यास।
-            </div>
-
-            <div class="feature">
-                <strong>👨‍🏫 Guidance</strong>
-                विद्यार्थियों के लिए उचित मार्गदर्शन।
-            </div>
-
-            <div class="feature">
-                <strong>💻 Digital Skills</strong>
-                आधुनिक कंप्यूटर कौशल।
-            </div>
-
-            <div class="feature">
-                <strong>🚀 Better Future</strong>
-                कैरियर के लिए उपयोगी शिक्षा।
-            </div>
-
-        </div>
+      <div class="course-card">
+        <div class="course-icon">⌨️</div>
+        <h3>BCC AND OTHER COURSES</h3>
+        <p>
+          Basic computer knowledge and other useful computer courses.
+        </p>
+        <button class="apply-btn" onclick="openAdmission('BCC AND OTHER COURSES')">
+          APPLY NOW
+        </button>
+      </div>
 
     </div>
+  </section>
 
-</section>
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <h2 class="section-title">OUR SERVICES</h2>
+    <p class="section-subtitle">
+      बेहतर शिक्षा और विद्यार्थियों के लिए हमारी सुविधाएं
+    </p>
 
-<!-- ADMISSION PROCESS -->
+    <div class="service-grid">
 
-<section>
+      <div class="service-card">
+        <div class="service-icon">🖥</div>
+        <h4>QUALITY EDUCATION</h4>
+        <p>Practical and modern computer education for strong foundations.</p>
+      </div>
 
-    <div class="title">
-        <h2>ADMISSION <span>PROCESS</span></h2>
-        <p>प्रवेश लेने की सरल प्रक्रिया</p>
+      <div class="service-card">
+        <div class="service-icon">📜</div>
+        <h4>CERTIFIED COURSES</h4>
+        <p>Government approved and career-oriented certified courses.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🧑‍💻</div>
+        <h4>PRACTICAL TRAINING</h4>
+        <p>Hands-on practical training to improve professional skills.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🤝</div>
+        <h4>CAREER GUIDANCE</h4>
+        <p>Guidance and support to help students choose a better career.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎧</div>
+        <h4>STUDENT SUPPORT</h4>
+        <p>Helpful support for student queries and course-related guidance.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">👥</div>
+        <h4>EXPERIENCED FACULTY</h4>
+        <p>Learn from qualified and experienced faculty members.</p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="steps">
-
-        <div class="step">
-            <div class="num">1</div>
-            <h3>Choose Course</h3>
-            <p>अपना पसंदीदा कोर्स चुनें।</p>
-        </div>
-
-        <div class="step">
-            <div class="num">2</div>
-            <h3>Fill Form</h3>
-            <p>Admission Form भरें।</p>
-        </div>
-
-        <div class="step">
-            <div class="num">3</div>
-            <h3>WhatsApp Submit</h3>
-            <p>Details WhatsApp पर भेजें।</p>
-        </div>
-
-        <div class="step">
-            <div class="num">4</div>
-            <h3>Contact SSCE</h3>
-            <p>आगे की जानकारी के लिए संपर्क करें।</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- GALLERY -->
-
-<section class="gallery" id="gallery">
-
-    <div class="title">
-        <h2>OUR <span>GALLERY</span></h2>
-        <p>हमारे संस्थान की तस्वीरें देखने के लिए फोटो पर क्लिक करें</p>
-    </div>
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <h2 class="section-title">OUR GALLERY</h2>
+    <p class="section-subtitle">
+      हमारे कंप्यूटर सेंटर की झलकियां
+    </p>
 
     <div class="gallery-grid">
 
-        <figure class="gallery-item" onclick="openLightbox(0)">
-            <img src="images/gallery1.jpg" alt="SSCE Computer Center Front View">
-            <figcaption>SSCE Computer Center Front View</figcaption>
-        </figure>
+      <div class="gallery-card" onclick="openLightbox('images/front.jpg')">
+        <img src="images/front.jpg" alt="SSCE Computer Center">
+        <div class="gallery-caption">SSCE Computer Center</div>
+      </div>
 
-        <figure class="gallery-item" onclick="openLightbox(1)">
-            <img src="images/gallery2.jpg" alt="Office View">
-            <figcaption>Office View</figcaption>
-        </figure>
+      <div class="gallery-card" onclick="openLightbox('images/lab.jpg')">
+        <img src="images/lab.jpg" alt="Computer Lab">
+        <div class="gallery-caption">Computer Lab</div>
+      </div>
 
-        <figure class="gallery-item" onclick="openLightbox(2)">
-            <img src="images/gallery3.jpg" alt="Computer Class">
-            <figcaption>Computer Class</figcaption>
-        </figure>
+      <div class="gallery-card" onclick="openLightbox('images/class.jpg')">
+        <img src="images/class.jpg" alt="Computer Class">
+        <div class="gallery-caption">Computer Class</div>
+      </div>
 
-        <figure class="gallery-item" onclick="openLightbox(3)">
-            <img src="images/gallery4.jpg" alt="Computer Lab">
-            <figcaption>Computer Lab</figcaption>
-        </figure>
+      <div class="gallery-card" onclick="openLightbox('images/office.jpg')">
+        <img src="images/office.jpg" alt="Office View">
+        <div class="gallery-caption">Office View</div>
+      </div>
 
-        <figure class="gallery-item" onclick="openLightbox(4)">
-            <img src="images/gallery5.jpg" alt="Office View">
-            <figcaption>Office View</figcaption>
-        </figure>
+      <div class="gallery-card" onclick="openLightbox('images/center.jpg')">
+        <img src="images/center.jpg" alt="SSCE Center View">
+        <div class="gallery-caption">SSCE Center View</div>
+      </div>
 
-        <figure class="gallery-item" onclick="openLightbox(5)">
-            <img src="images/gallery6.jpg" alt="Computer Lab">
-            <figcaption>Computer Lab</figcaption>
-        </figure>
-
-    </div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-    <div class="title">
-        <h2>CONTACT <span>US</span></h2>
-        <p>हमसे संपर्क करें और हमारी location देखें</p>
-    </div>
-
-    <div class="contact-box">
-
-        <div>
-
-            <h3>SHREE SHYAM COMPUTER EDUCATION</h3>
-
-            <p>
-                <strong>श्री श्याम कंप्यूटर एजुकेशन</strong>
-            </p>
-
-            <p>
-                🎓 Center Code: <strong>32290325</strong>
-            </p>
-
-            <p>
-                📞 Phone: <strong>01586-299472</strong>
-            </p>
-
-            <p>
-                🟢 WhatsApp: <strong>7231905659</strong>
-            </p>
-
-            <p>
-                📧 Email: <strong>sscemaroth@gmail.com</strong>
-            </p>
-
-            <a class="call" href="tel:01586299472">
-                📞 Call Now
-            </a>
-
-            <a class="whatsapp"
-               href="https://wa.me/917231905659"
-               target="_blank">
-                🟢 WhatsApp
-            </a>
-
-            <br>
-
-            <a class="btn primary"
-               href="https://maps.app.goo.gl/dWzr7Fpv7VkH942D8"
-               target="_blank">
-                📍 Open Google Map
-            </a>
-
-        </div>
-
-        <div class="map-box">
-
-            <iframe
-                src="https://www.google.com/maps?q=Maroth,Rajasthan&output=embed"
-                loading="lazy"
-                allowfullscreen>
-            </iframe>
-
-        </div>
+      <div class="gallery-card" onclick="openLightbox('images/student.jpg')">
+        <img src="images/student.jpg" alt="Student Activities">
+        <div class="gallery-caption">Student Activities</div>
+      </div>
 
     </div>
+  </section>
 
-</section>
+  <!-- ADMISSION -->
+  <section class="admission" id="admission">
+    <h2 class="section-title">ONLINE ADMISSION</h2>
 
-<!-- FOOTER -->
+    <div class="admission-box">
+      <p>
+        प्रवेश के लिए नीचे दिए गए बटन पर क्लिक करके Admission Form भरें।
+        Form submit करने के बाद आपकी जानकारी WhatsApp पर भेजने का विकल्प खुलेगा।
+      </p>
 
-<footer>
-
-    <div class="foot">
-
-        <div>
-            <h2>SSCE</h2>
-            <p>SHREE SHYAM COMPUTER EDUCATION</p>
-            <p>Computer Courses, Digital Skills and Online Services.</p>
-        </div>
-
-        <div>
-            <h3>Quick Links</h3>
-            <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Courses</li>
-                <li>Gallery</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Services</h3>
-            <ul>
-                <li>Online Forms</li>
-                <li>Scholarship Forms</li>
-                <li>Recruitment Forms</li>
-                <li>Exam Forms</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Contact</h3>
-            <p>📞 01586-299472</p>
-            <p>🟢 7231905659</p>
-            <p>Center Code: 32290325</p>
-        </div>
-
+      <button class="big-apply" onclick="openAdmission()">
+        📝 OPEN ADMISSION FORM
+      </button>
     </div>
+  </section>
 
-    <div class="copy">
-        © 2026 SHREE SHYAM COMPUTER EDUCATION (SSCE). All Rights Reserved.
-    </div>
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <h2 class="section-title">CONTACT & LOCATION</h2>
 
-</footer>
+    <div class="contact-grid">
 
-<!-- FLOATING BUTTONS -->
-
-<a class="float fcall" href="tel:01586299472">
-    📞 Call
-</a>
-
-<a class="float fwa"
-   href="https://wa.me/917231905659"
-   target="_blank">
-    🟢 WhatsApp
-</a>
-
-<!-- ADMISSION FORM POPUP -->
-
-<div class="admission-modal"
-     id="admissionModal"
-     aria-hidden="true">
-
-    <div class="admission-form-box">
-
-        <button class="form-close"
-                type="button"
-                onclick="closeAdmissionForm()">
-            ×
-        </button>
-
-        <h2>STUDENT ADMISSION FORM</h2>
+      <div class="contact-card">
+        <h3>SHREE SHYAM COMPUTER EDUCATION</h3>
 
         <p>
-            अपनी जानकारी भरें। Submit करने पर आपकी details
-            WhatsApp पर भेजने के लिए तैयार होंगी।
+          📍 <strong>Address:</strong><br>
+          Opposite Jain Main Market, Maroth,<br>
+          Tehsil Nawa, District Didwana-Kuchaman,<br>
+          Rajasthan – 341507
         </p>
 
-        <form id="studentAdmissionForm"
-              class="student-form">
+        <p>🎓 <strong>Center Code:</strong> 32290325</p>
+        <p>📞 <strong>Phone:</strong> 01586-299472</p>
+        <p>🟢 <strong>Mobile / WhatsApp:</strong> 917231905659</p>
+        <p>✉ <strong>Email:</strong> sscemaroth@gmail.com</p>
 
-            <div>
-                <label>Student Name / विद्यार्थी का नाम *</label>
+        <a
+          class="map-btn"
+          href="https://www.google.com/maps/search/?api=1&query=Maroth+Rajasthan"
+          target="_blank"
+        >
+          📍 OPEN IN GOOGLE MAPS
+        </a>
+      </div>
 
-                <input
-                    name="name"
-                    required
-                    placeholder="पूरा नाम">
-            </div>
-
-            <div>
-                <label>Father's Name / पिता का नाम *</label>
-
-                <input
-                    name="father"
-                    required
-                    placeholder="पिता का नाम">
-            </div>
-
-            <div>
-                <label>Mobile Number / मोबाइल नंबर *</label>
-
-                <input
-                    name="mobile"
-                    required
-                    inputmode="numeric"
-                    pattern="[0-9]{10}"
-                    maxlength="10"
-                    placeholder="10 digit mobile number">
-            </div>
-
-            <div>
-                <label>Email</label>
-
-                <input
-                    name="email"
-                    type="email"
-                    placeholder="example@email.com">
-            </div>
-
-            <div>
-                <label>Course / कोर्स *</label>
-
-                <select name="course"
-                        id="courseSelect"
-                        required>
-
-                    <option value="">Select Course</option>
-                    <option>RSCIT REGULAR</option>
-                    <option>RSCIT WITHOUT STUDY</option>
-                    <option>RSCFA / TALLY</option>
-                    <option>BCC</option>
-                    <option>Other Course</option>
-
-                </select>
-            </div>
-
-            <div>
-                <label>Highest Qualification *</label>
-
-                <select name="qualification"
-                        required>
-
-                    <option value="">Select Qualification</option>
-                    <option>8th</option>
-                    <option>10th</option>
-                    <option>12th</option>
-                    <option>Graduate</option>
-                    <option>Post Graduate</option>
-                    <option>Other</option>
-
-                </select>
-            </div>
-
-            <div class="full">
-
-                <label>Address / पता *</label>
-
-                <textarea
-                    name="address"
-                    required
-                    placeholder="पूरा पता"></textarea>
-
-            </div>
-
-            <div class="full">
-
-                <label>Message / Query</label>
-
-                <textarea
-                    name="message"
-                    placeholder="कोई अन्य जानकारी या प्रश्न"></textarea>
-
-            </div>
-
-            <div class="full">
-
-                <button class="btn primary"
-                        type="submit"
-                        style="width:100%;">
-
-                    📝 SUBMIT ON WHATSAPP
-
-                </button>
-
-                <div class="form-note">
-                    * आवश्यक जानकारी
-                </div>
-
-            </div>
-
-        </form>
+      <div class="map-card">
+        <iframe
+          src="https://www.google.com/maps?q=Maroth,Rajasthan&output=embed"
+          loading="lazy">
+        </iframe>
+      </div>
 
     </div>
+  </section>
 
-</div>
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 SHREE SHYAM COMPUTER EDUCATION | MAROTH
+    </p>
+    <p>
+      CENTER CODE: 32290325
+    </p>
+  </footer>
 
-<!-- FULL SCREEN GALLERY -->
+  <!-- FLOATING BUTTONS -->
+  <a class="floating-call" href="tel:01586299472">
+    📞 Call
+  </a>
 
-<div class="lightbox"
-     id="lightbox"
-     aria-hidden="true">
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/917231905659"
+    target="_blank">
+    🟢 WhatsApp
+  </a>
 
-    <button class="lightbox-close"
-            type="button"
-            onclick="closeLightbox()">
-        ×
-    </button>
+  <!-- ADMISSION MODAL -->
+  <div class="modal" id="admissionModal">
+    <div class="modal-content">
 
-    <button class="lightbox-nav prev"
-            type="button"
-            onclick="changeImage(-1)">
-        ❮
-    </button>
+      <span class="close-modal" onclick="closeAdmission()">&times;</span>
 
-    <img id="lightboxImage"
-         src=""
-         alt="Gallery Image">
+      <h2>STUDENT ADMISSION FORM</h2>
+      <p class="small-text">
+        फॉर्म भरने के बाद WhatsApp पर details भेजी जाएंगी।
+      </p>
 
-    <button class="lightbox-nav next"
-            type="button"
-            onclick="changeImage(1)">
-        ❯
-    </button>
+      <form id="admissionForm">
 
-    <div class="lightbox-caption"
-         id="lightboxCaption">
+        <input
+          type="text"
+          id="studentName"
+          placeholder="Student Name *"
+          required>
+
+        <input
+          type="text"
+          id="fatherName"
+          placeholder="Father's Name *"
+          required>
+
+        <input
+          type="tel"
+          id="mobile"
+          placeholder="Mobile Number *"
+          required>
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Email ID">
+
+        <select id="course" required>
+          <option value="">Select Course *</option>
+          <option value="RS-CIT">RS-CIT</option>
+          <option value="RS-CFA / TALLY">RS-CFA / TALLY</option>
+          <option value="BCC AND OTHER COURSES">
+            BCC AND OTHER COURSES
+          </option>
+        </select>
+
+        <select id="qualification" required>
+          <option value="">Select Qualification *</option>
+          <option>8th Pass</option>
+          <option>10th Pass</option>
+          <option>12th Pass</option>
+          <option>Graduate</option>
+          <option>Other</option>
+        </select>
+
+        <textarea
+          id="address"
+          placeholder="Full Address *"
+          required></textarea>
+
+        <textarea
+          id="message"
+          placeholder="Message / Query"></textarea>
+
+        <button type="submit" class="submit-btn">
+          SUBMIT & SEND ON WHATSAPP
+        </button>
+
+      </form>
+
     </div>
+  </div>
 
-</div>
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImage" src="" alt="Gallery Image">
+  </div>
 
-<script>
+  <script>
+    const modal = document.getElementById("admissionModal");
+    const courseSelect = document.getElementById("course");
 
-/* =========================
-   GALLERY LIGHTBOX
-========================= */
+    function openAdmission(courseName = "") {
+      modal.style.display = "block";
 
-const galleryImages =
-    Array.from(document.querySelectorAll(".gallery-item img"));
-
-let currentImage = 0;
-
-function openLightbox(index){
-
-    currentImage = index;
-
-    const box =
-        document.getElementById("lightbox");
-
-    box.classList.add("show");
-
-    updateLightbox();
-
-    document.body.style.overflow = "hidden";
-}
-
-function closeLightbox(){
-
-    document
-        .getElementById("lightbox")
-        .classList
-        .remove("show");
-
-    document.body.style.overflow = "";
-}
-
-function changeImage(step){
-
-    currentImage =
-        (currentImage + step + galleryImages.length)
-        % galleryImages.length;
-
-    updateLightbox();
-}
-
-function updateLightbox(){
-
-    const image =
-        galleryImages[currentImage];
-
-    document
-        .getElementById("lightboxImage")
-        .src = image.src;
-
-    document
-        .getElementById("lightboxImage")
-        .alt = image.alt;
-
-    document
-        .getElementById("lightboxCaption")
-        .textContent = image.alt;
-}
-
-
-/* =========================
-   ADMISSION FORM
-========================= */
-
-const admissionModal =
-    document.getElementById("admissionModal");
-
-const admissionForm =
-    document.getElementById("studentAdmissionForm");
-
-const courseSelect =
-    document.getElementById("courseSelect");
-
-
-function openAdmissionForm(course = ""){
-
-    if(course){
-        courseSelect.value = course;
+      if (courseName !== "") {
+        courseSelect.value = courseName;
+      }
     }
 
-    admissionModal.classList.add("show");
+    function closeAdmission() {
+      modal.style.display = "none";
+    }
 
-    admissionModal.setAttribute(
-        "aria-hidden",
-        "false"
-    );
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        closeAdmission();
+      }
+    };
 
-    document.body.style.overflow = "hidden";
-
-    setTimeout(function(){
-
-        admissionForm
-            .querySelector('[name="name"]')
-            .focus();
-
-    },100);
-}
-
-
-function closeAdmissionForm(){
-
-    admissionModal.classList.remove("show");
-
-    admissionModal.setAttribute(
-        "aria-hidden",
-        "true"
-    );
-
-    document.body.style.overflow = "";
-}
-
-
-/* ALL APPLY NOW BUTTONS */
-
-document
-    .querySelectorAll(".open-admission")
-    .forEach(function(button){
-
-        button.addEventListener(
-            "click",
-            function(event){
-
-                event.preventDefault();
-
-                openAdmissionForm(
-                    button.dataset.course || ""
-                );
-            }
-        );
-
-    });
-
-
-/* FORM SUBMIT TO WHATSAPP */
-
-admissionForm.addEventListener(
-    "submit",
-    function(event){
+    document
+      .getElementById("admissionForm")
+      .addEventListener("submit", function(event) {
 
         event.preventDefault();
 
-        if(!admissionForm.checkValidity()){
+        const studentName =
+          document.getElementById("studentName").value;
 
-            admissionForm.reportValidity();
+        const fatherName =
+          document.getElementById("fatherName").value;
 
-            return;
-        }
+        const mobile =
+          document.getElementById("mobile").value;
 
-        const data =
-            new FormData(admissionForm);
+        const email =
+          document.getElementById("email").value;
+
+        const course =
+          document.getElementById("course").value;
+
+        const qualification =
+          document.getElementById("qualification").value;
+
+        const address =
+          document.getElementById("address").value;
 
         const message =
-            "🎓 *NEW STUDENT ADMISSION FORM*\n\n" +
+          document.getElementById("message").value;
 
-            "👤 *Student Name:* " +
-            data.get("name") + "\n\n" +
+        const whatsappNumber = "917231905659";
 
-            "👨 *Father's Name:* " +
-            data.get("father") + "\n\n" +
+        const text =
+`NEW ADMISSION ENQUIRY - SSCE
 
-            "📱 *Mobile:* " +
-            data.get("mobile") + "\n\n" +
-
-            "📧 *Email:* " +
-            (data.get("email") || "-") + "\n\n" +
-
-            "📚 *Course:* " +
-            data.get("course") + "\n\n" +
-
-            "🎓 *Qualification:* " +
-            data.get("qualification") + "\n\n" +
-
-            "📍 *Address:* " +
-            data.get("address") + "\n\n" +
-
-            "📝 *Message:* " +
-            (data.get("message") || "-");
+Student Name: ${studentName}
+Father's Name: ${fatherName}
+Mobile: ${mobile}
+Email: ${email}
+Course: ${course}
+Qualification: ${qualification}
+Address: ${address}
+Message: ${message}`;
 
         const whatsappURL =
-            "https://wa.me/917231905659?text=" +
-            encodeURIComponent(message);
+          "https://wa.me/" +
+          whatsappNumber +
+          "?text=" +
+          encodeURIComponent(text);
 
-        window.open(
-            whatsappURL,
-            "_blank"
-        );
+        window.open(whatsappURL, "_blank");
 
-        closeAdmissionForm();
+        closeAdmission();
+        this.reset();
+      });
 
+    function openLightbox(imageSrc) {
+      document.getElementById("lightboxImage").src = imageSrc;
+      document.getElementById("lightbox").style.display = "flex";
     }
-);
 
-
-/* CLOSE POPUP OUTSIDE */
-
-admissionModal.addEventListener(
-    "click",
-    function(event){
-
-        if(event.target === admissionModal){
-
-            closeAdmissionForm();
-
-        }
-
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
     }
-);
-
-
-/* CLOSE LIGHTBOX OUTSIDE */
-
-document
-    .getElementById("lightbox")
-    .addEventListener(
-        "click",
-        function(event){
-
-            if(event.target.id === "lightbox"){
-
-                closeLightbox();
-
-            }
-
-        }
-    );
-
-
-/* KEYBOARD CONTROLS */
-
-document.addEventListener(
-    "keydown",
-    function(event){
-
-        if(event.key === "Escape"){
-
-            closeAdmissionForm();
-            closeLightbox();
-
-        }
-
-        if(
-            document
-                .getElementById("lightbox")
-                .classList
-                .contains("show")
-        ){
-
-            if(event.key === "ArrowLeft"){
-                changeImage(-1);
-            }
-
-            if(event.key === "ArrowRight"){
-                changeImage(1);
-            }
-
-        }
-
-    }
-);
-
-</script>
+  </script>
 
 </body>
 </html>
