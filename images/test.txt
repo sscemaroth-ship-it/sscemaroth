@@ -1,10 +1,14 @@
-images/
-├── ramji.jpg
-├── ganeshji.jpg
-├── shyambaba.jpg
-├── gallery1.jpg
-├── gallery2.jpg
-├── gallery3.jpg
-├── gallery4.jpg
-├── gallery5.jpg
-└── gallery6.jpg
+sscemaroth/
+│
+├── index.html
+│
+└── images/
+    ├── ram.jpg
+    ├── ganesh.jpg
+    ├── shyam.jpg
+    ├── front.jpg
+    ├── lab.jpg
+    ├── class.jpg
+    ├── office.jpg
+    ├── center.jpg
+    └── student.jpg
