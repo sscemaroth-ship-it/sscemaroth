@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SHREE SHYAM COMPUTER EDUCATION | SSCE MAROTH</title>
+
+  <style>
+    :root{
+      --green:#063d27;
+      --green2:#0b5c3a;
+      --lightgreen:#eaf7e8;
+      --gold:#d6a400;
+      --gold2:#f2c94c;
+      --white:#ffffff;
+      --dark:#17231c;
+      --cream:#fffdf5;
+      --shadow:0 10px 30px rgba(0,0,0,.12);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg,#fffdf7,#f2faef);
+      color:#1d2a23;
+      overflow-x:hidden;
+    }
+
+    img{
+      width:100%;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* TOP BAR */
+    .topbar{
+      background:#032819;
+      color:white;
+      border-top:3px solid var(--gold);
+      border-bottom:2px solid var(--gold);
+      min-height:58px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:10px 30px;
+      gap:20px;
+      font-weight:bold;
+    }
+
+    .top-left,
+    .top-center,
+    .top-right{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .top-center{
+      color:var(--gold2);
+      font-size:25px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    .top-right{
+      font-size:16px;
+      white-space:nowrap;
+    }
+
+    /* MAIN HEADER */
+    header{
+      background:linear-gradient(135deg,#fff,#f5f7f1,#fff);
+      border-bottom:3px solid var(--gold);
+    }
+
+    .main-header{
+      max-width:1440px;
+      margin:auto;
+      padding:14px 20px;
+      display:grid;
+      grid-template-columns:125px minmax(0,1fr) 235px;
+      gap:14px;
+      align-items:center;
+      overflow:visible;
+    }
+
+    .logo-wrap{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .logo{
+      width:108px;
+      height:108px;
+      border-radius:50%;
+      background:radial-gradient(circle,#145237,#022918);
+      border:5px solid var(--gold);
+      box-shadow:0 0 0 10px #fff,0 0 0 12px var(--gold);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:bold;
+      position:relative;
+    }
+
+    .logo::before{
+      content:"✦";
+      position:absolute;
+      top:-38px;
+      color:var(--gold);
+      font-size:35px;
+    }
+
+    .logo-icon{
+      font-size:45px;
+      margin-bottom:8px;
+    }
+
+    .logo-text{
+      font-size:27px;
+      letter-spacing:2px;
+    }
+
+    .branding{
+      text-align:center;
+    }
+
+    .center-name{
+      font-size:clamp(28px,2.85vw,43px);
+      line-height:1;
+      letter-spacing:-1.25px;
+      font-weight:900;
+      color:#082d1c;
+      white-space:nowrap;
+      margin:0 0 8px;
+      padding:0;
+      width:100%;
+      overflow:visible;
+    }
+
+    .hindi-name{
+      color:#c88700;
+      font-size:clamp(24px,2.35vw,34px);
+      font-weight:900;
+      line-height:1.05;
+      margin-bottom:9px;
+      white-space:nowrap;
+    }
+
+    .code-badge{
+      display:inline-block;
+      background:#052b1a;
+      color:white;
+      border:2px solid var(--gold);
+      padding:8px 20px;
+      border-radius:30px;
+      font-size:16px;
+      font-weight:bold;
+      box-shadow:var(--shadow);
+    }
+
+    .contact-box{
+      border-left:2px solid var(--gold);
+      padding-left:14px;
+      min-width:0;
+      font-size:13px;
+    }
+
+    .contact-line{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin:16px 0;
+      font-size:16px;
+      font-weight:bold;
+      white-space:nowrap;
+    }
+
+    .contact-icon{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      background:#063d27;
+      color:white;
+      display:grid;
+      place-items:center;
+      font-size:20px;
+      flex-shrink:0;
+    }
+
+    .enquiry-btn{
+      margin-top:15px;
+      width:100%;
+      border:none;
+      cursor:pointer;
+      padding:16px;
+      border-radius:10px;
+      background:linear-gradient(135deg,#e6b000,#9a6500);
+      color:white;
+      font-size:19px;
+      font-weight:bold;
+      box-shadow:var(--shadow);
+      transition:.3s;
+    }
+
+    .enquiry-btn:hover{
+      transform:translateY(-2px);
+    }
+
+    /* NAVIGATION */
+    nav{
+      background:#032b1a;
+      color:white;
+      border-bottom:3px solid var(--gold);
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    .nav-wrap{
+      max-width:1600px;
+      margin:auto;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      padding:20px 26px;
+      font-weight:bold;
+      font-size:16px;
+      border-right:1px solid rgba(214,164,0,.5);
+      transition:.3s;
+    }
+
+    nav a:hover{
+      color:var(--gold2);
+      background:#052f1d;
+    }
+
+    /* HERO DEVOTIONAL PHOTOS */
+    .photo-section{
+      padding:18px 20px 10px;
+      background:
+        linear-gradient(90deg,rgba(234,247,232,.8),#fff,rgba(234,247,232,.8));
+    }
+
+    .photo-grid{
+      max-width:1120px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .dev-card{
+      background:#fff;
+      padding:8px;
+      border:3px solid var(--gold);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .dev-card img{
+      width:100%;
+      height:270px;
+      object-fit:contain;
+      object-position:center;
+      background:#f6f1e7;
+      border-radius:17px;
+      display:block;
+    }
+
+    .photo-caption{
+      background:#05341f;
+      color:var(--gold2);
+      border:2px solid var(--gold);
+      margin:-42px 22px 0;
+      position:relative;
+      padding:8px;
+      text-align:center;
+      border-radius:20px;
+      font-size:18px;
+      font-weight:bold;
+    }
+
+    /* SECTION */
+    section{
+      padding:70px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:42px;
+      color:#082d1c;
+      margin-bottom:12px;
+      font-weight:900;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      color:#5c6b62;
+      margin-bottom:40px;
+      font-size:18px;
+    }
+
+    /* ABOUT */
+    .about{
+      background:var(--cream);
+    }
+
+    .about-box{
+      max-width:1100px;
+      margin:auto;
+      background:white;
+      border:1px solid #e6d58d;
+      border-radius:20px;
+      padding:35px;
+      box-shadow:var(--shadow);
+      line-height:1.9;
+      font-size:17px;
+      text-align:center;
+    }
+
+    /* COURSES */
+    .courses{
+      background:#f7fcf5;
+    }
+
+    .course-grid{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+    }
+
+    .course-card{
+      background:white;
+      border:1px solid #e7dca8;
+      border-radius:22px;
+      padding:32px 25px;
+      text-align:center;
+      box-shadow:var(--shadow);
+      transition:.3s;
+    }
+
+    .course-card:hover{
+      transform:translateY(-7px);
+    }
+
+    .course-icon{
+      width:78px;
+      height:78px;
+      margin:0 auto 20px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:#063d27;
+      border:3px solid var(--gold);
+      color:white;
+      font-size:32px;
+    }
+
+    .course-card h3{
+      color:#26362d;
+      font-size:23px;
+      margin-bottom:15px;
+    }
+
+    .course-card p{
+      color:#66736b;
+      line-height:1.7;
+      min-height:58px;
+    }
+
+    .apply-btn{
+      width:100%;
+      margin-top:22px;
+      padding:14px;
+      border:none;
+      border-radius:9px;
+      background:linear-gradient(135deg,#0c6641,#053b25);
+      color:white;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    /* SERVICES */
+    .services{
+      background:linear-gradient(135deg,#fff,#f7fbf4);
+    }
+
+    .service-grid{
+      max-width:1500px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:15px;
+    }
+
+    .service-card{
+      background:white;
+      border:1px solid #dfe5db;
+      border-radius:18px;
+      padding:28px 18px;
+      text-align:center;
+      box-shadow:0 5px 18px rgba(0,0,0,.07);
+    }
+
+    .service-card .service-icon{
+      width:78px;
+      height:78px;
+      border-radius:50%;
+      background:#063d27;
+      color:white;
+      border:3px solid var(--gold);
+      display:grid;
+      place-items:center;
+      margin:0 auto 18px;
+      font-size:28px;
+    }
+
+    .service-card h4{
+      margin-bottom:12px;
+      font-size:16px;
+    }
+
+    .service-card p{
+      font-size:14px;
+      line-height:1.6;
+      color:#56625b;
+    }
+
+    /* GALLERY */
+    .gallery{
+      background:#fffdf7;
+    }
+
+    .gallery-grid{
+      max-width:1300px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+    }
+
+    .gallery-card{
+      background:white;
+      border:2px solid var(--gold);
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      cursor:pointer;
+    }
+
+    .gallery-card img{
+      height:250px;
+      object-fit:cover;
+    }
+
+    .gallery-caption{
+      padding:16px;
+      text-align:center;
+      font-weight:bold;
+      font-size:18px;
+      color:#063d27;
+    }
+
+    /* ADMISSION */
+    .admission{
+      background:linear-gradient(135deg,#053d26,#0d7548);
+      color:white;
+      text-align:center;
+    }
+
+    .admission .section-title{
+      color:var(--gold2);
+    }
+
+    .admission-box{
+      max-width:850px;
+      margin:auto;
+    }
+
+    .admission-box p{
+      font-size:18px;
+      line-height:1.8;
+    }
+
+    .big-apply{
+      margin-top:25px;
+      background:linear-gradient(135deg,#f3c94e,#b67c00);
+      color:#173020;
+      border:none;
+      border-radius:12px;
+      padding:18px 35px;
+      font-size:19px;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    /* CONTACT */
+    .contact-section{
+      background:#f7fbf4;
+    }
+
+    .contact-grid{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+    }
+
+    .contact-card,
+    .map-card{
+      background:white;
+      border-radius:20px;
+      padding:30px;
+      box-shadow:var(--shadow);
+      border:1px solid #e7dca8;
+    }
+
+    .contact-card h3{
+      color:#063d27;
+      margin-bottom:20px;
+      font-size:25px;
+    }
+
+    .contact-card p{
+      margin:14px 0;
+      line-height:1.7;
+    }
+
+    .map-btn{
+      display:inline-block;
+      margin-top:15px;
+      background:#063d27;
+      color:white;
+      padding:14px 22px;
+      border-radius:8px;
+      font-weight:bold;
+    }
+
+    .map-card iframe{
+      width:100%;
+      height:330px;
+      border:0;
+      border-radius:14px;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#021f13;
+      color:white;
+      text-align:center;
+      padding:28px 20px;
+      border-top:3px solid var(--gold);
+    }
+
+    footer p{
+      margin:7px 0;
+    }
+
+    /* FLOATING BUTTONS */
+    .floating-whatsapp,
+    .floating-call{
+      position:fixed;
+      bottom:22px;
+      z-index:1000;
+      padding:14px 22px;
+      border-radius:30px;
+      color:white;
+      font-weight:bold;
+      box-shadow:var(--shadow);
+    }
+
+    .floating-whatsapp{
+      right:20px;
+      background:#168a4d;
+    }
+
+    .floating-call{
+      left:20px;
+      background:#0b5c3a;
+    }
+
+    /* MODAL */
+    .modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.7);
+      z-index:3000;
+      padding:20px;
+      overflow-y:auto;
+    }
+
+    .modal-content{
+      max-width:650px;
+      margin:40px auto;
+      background:white;
+      border-radius:22px;
+      padding:30px;
+      position:relative;
+      box-shadow:0 20px 60px rgba(0,0,0,.4);
+    }
+
+    .close-modal{
+      position:absolute;
+      top:12px;
+      right:18px;
+      font-size:30px;
+      cursor:pointer;
+      color:#444;
+    }
+
+    .modal-content h2{
+      color:#063d27;
+      margin-bottom:8px;
+    }
+
+    .modal-content .small-text{
+      color:#6b756f;
+      margin-bottom:20px;
+    }
+
+    form{
+      display:grid;
+      gap:15px;
+    }
+
+    input,
+    select,
+    textarea{
+      width:100%;
+      padding:14px;
+      border:1px solid #ccd6ce;
+      border-radius:9px;
+      font-size:16px;
+      outline:none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus{
+      border-color:var(--gold);
+      box-shadow:0 0 0 3px rgba(214,164,0,.12);
+    }
+
+    textarea{
+      min-height:100px;
+      resize:vertical;
+    }
+
+    .submit-btn{
+      border:none;
+      padding:16px;
+      border-radius:10px;
+      background:#11874a;
+      color:white;
+      font-weight:bold;
+      font-size:17px;
+      cursor:pointer;
+    }
+
+    /* LIGHTBOX */
+    .lightbox{
+      display:none;
+      position:fixed;
+      inset:0;
+      z-index:4000;
+      background:rgba(0,0,0,.92);
+      padding:25px;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .lightbox img{
+      max-width:95%;
+      max-height:90vh;
+      width:auto;
+      border-radius:12px;
+      border:3px solid var(--gold);
+    }
+
+    .lightbox-close{
+      position:absolute;
+      top:20px;
+      right:30px;
+      color:white;
+      font-size:40px;
+      cursor:pointer;
+    }
+
+    /* MOBILE */
+    @media(max-width:1100px){
+      .main-header{
+        grid-template-columns:140px 1fr;
+      }
+
+      .contact-box{
+        grid-column:1/-1;
+        border-left:none;
+        border-top:2px solid var(--gold);
+        padding:18px 0 0;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+      }
+
+      .enquiry-btn{
+        grid-column:1/-1;
+      }
+
+      .service-grid{
+        grid-template-columns:repeat(3,1fr);
+      }
+    }
+
+    @media(max-width:850px){
+      .topbar{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .top-center{
+        font-size:22px;
+      }
+
+      .main-header{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .contact-box{
+        grid-column:auto;
+      }
+
+      .center-name{
+        white-space:normal;
+        letter-spacing:-1px;
+      }
+
+      .photo-grid,
+      .course-grid,
+      .gallery-grid,
+      .contact-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .service-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .dev-card img{
+        height:280px;
+      }
+    }
+
+    @media(max-width:560px){
+      .top-left,
+      .top-right{
+        font-size:13px;
+      }
+
+      .top-center{
+        font-size:18px;
+      }
+
+      .main-header{
+        padding:20px 15px;
+      }
+
+      .logo{
+        width:125px;
+        height:125px;
+      }
+
+      .center-name{
+        font-size:35px;
+      }
+
+      .hindi-name{
+        font-size:31px;
+      }
+
+      .photo-grid,
+      .course-grid,
+      .gallery-grid,
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+
+      .service-grid{
+        grid-template-columns:1fr;
+      }
+
+      .contact-box{
+        display:block;
+      }
+
+      .dev-card img{
+        height:320px;
+      }
+
+      nav a{
+        padding:14px 13px;
+        font-size:13px;
+      }
+
+      .section-title{
+        font-size:32px;
+      }
+    }
+
+    /* FINAL DESKTOP COMPACT FIX */
+    @media (min-width:1101px){
+      .main-header{
+        max-width:1400px;
+        min-height:170px;
+        padding:14px 22px;
+        grid-template-columns:130px minmax(0,1fr) 260px;
+        gap:18px;
+      }
+      .logo{width:115px;height:115px;}
+      .logo::before{top:-30px;font-size:28px;}
+      .logo-icon{font-size:34px;margin-bottom:5px;}
+      .logo-text{font-size:22px;letter-spacing:1px;}
+      .center-name{
+        font-size:clamp(36px,4vw,52px);
+        letter-spacing:-1.8px;
+        margin-bottom:8px;
+      }
+      .hindi-name{
+        font-size:clamp(27px,3vw,38px);
+        margin-bottom:8px;
+      }
+      .code-badge{font-size:16px;padding:7px 20px;}
+      .contact-box{padding-left:16px;}
+      .contact-line{gap:9px;margin:9px 0;font-size:14px;}
+      .contact-icon{width:32px;height:32px;font-size:15px;}
+      .enquiry-btn{margin-top:10px;padding:13px;font-size:16px;}
+      nav a{padding:16px 22px;font-size:15px;}
+      .photo-grid{max-width:1100px;gap:18px;}
+      .dev-card img{height:240px;}
+      .photo-caption{font-size:18px;}
+      section{padding:50px 20px;}
+      .section-title{font-size:34px;}
+      .service-grid{max-width:1300px;grid-template-columns:repeat(5,1fr);}
+      .service-card{padding:24px 16px;}
+      .gallery-grid{max-width:1200px;gap:18px;}
+      .gallery-card img{height:220px;}
+    }
+    .single-contact{
+      max-width:650px;
+      grid-template-columns:1fr;
+    }
+
+  
+    /* FINAL DESKTOP FIT FIX */
+    @media (min-width:1100px){
+      .main-header{grid-template-columns:150px minmax(0,1fr) 270px;}
+      .contact-box{font-size:14px;}
+      .contact-box p{margin:9px 0; white-space:nowrap;}
+    }
+
+    @media (max-width:1200px) and (min-width:901px){
+      .main-header{grid-template-columns:120px minmax(0,1fr) 245px; gap:14px; padding:14px 18px;}
+      .logo{width:105px; height:105px;}
+      .center-name{font-size:clamp(30px,3.1vw,42px);}
+      .hindi-name{font-size:clamp(24px,2.5vw,34px);}
+      .contact-box{padding-left:14px; font-size:13px;}
+      .photo-grid{max-width:1040px; gap:14px;}
+      .dev-card img{height:240px;}
+    }
+
+  
+    /* CONTACT SECTION: ADDRESS + GOOGLE MAP ONLY */
+    .contact-only-wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:10px 20px 35px;
+      display:grid;
+      grid-template-columns:0.9fr 1.5fr;
+      gap:24px;
+      align-items:stretch;
+    }
+    .address-card,.map-card{
+      background:#fff;
+      border:1px solid rgba(180,130,0,.28);
+      border-radius:22px;
+      box-shadow:0 12px 35px rgba(0,0,0,.10);
+      overflow:hidden;
+    }
+    .address-card{
+      padding:34px 28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      text-align:left;
+    }
+    .address-card h3{
+      color:#082d1c;
+      font-size:25px;
+      margin:0 0 18px;
+    }
+    .address-card p{
+      color:#3f4650;
+      font-size:19px;
+      line-height:1.7;
+      font-weight:600;
+      margin:0 0 26px;
+    }
+    .map-button{
+      display:inline-block;
+      width:max-content;
+      max-width:100%;
+      background:#0b5d3d;
+      color:#fff !important;
+      text-decoration:none;
+      padding:14px 20px;
+      border-radius:12px;
+      font-weight:800;
+      letter-spacing:.3px;
+    }
+    .map-button:hover{transform:translateY(-2px);}
+    .map-card iframe{display:block; min-height:430px;}
+
+    @media (max-width:800px){
+      .contact-only-wrap{
+        grid-template-columns:1fr;
+        padding:10px 14px 28px;
+      }
+      .address-card{padding:28px 22px;}
+      .address-card h3{font-size:22px;}
+      .address-card p{font-size:17px;}
+      .map-card iframe{min-height:360px;}
+    }
+
+  
+    /* HEADER NAME FIT FIX */
+    .branding{min-width:0; overflow:visible;}
+    .contact-line{white-space:nowrap;}
+    @media (max-width:1200px) and (min-width:901px){
+      .main-header{
+        grid-template-columns:110px minmax(0,1fr) 225px;
+        gap:10px;
+        padding:12px 16px;
+      }
+      .logo{width:96px;height:96px;}
+      .center-name{
+        font-size:clamp(24px,2.45vw,34px);
+        letter-spacing:-1px;
+      }
+      .hindi-name{font-size:clamp(22px,2.15vw,30px);}
+      .contact-box{font-size:12px;padding-left:12px;}
+      .code-badge{font-size:14px;padding:7px 16px;}
+    }
+
+  
+    /* FINAL CONTACT SECTION — ADDRESS + GOOGLE MAP ONLY */
+    .contact-section{
+      padding:45px 20px 55px;
+      background:#f8f7f2;
+      border-top:3px solid var(--gold);
+    }
+    .contact-location-wrap{
+      max-width:760px;
+      margin:0 auto;
+    }
+    .location-card{
+      background:#fff;
+      border:2px solid rgba(191,143,0,.38);
+      border-radius:28px;
+      padding:38px 32px;
+      text-align:center;
+      box-shadow:0 15px 38px rgba(0,0,0,.10);
+    }
+    .location-icon{
+      font-size:42px;
+      line-height:1;
+      margin-bottom:12px;
+    }
+    .location-card h3{
+      margin:0 0 20px;
+      color:#073a24;
+      font-size:28px;
+      letter-spacing:.5px;
+    }
+    .location-card p{
+      margin:0 auto 28px;
+      max-width:620px;
+      color:#2f3940;
+      font-size:20px;
+      line-height:1.65;
+      font-weight:600;
+    }
+    .google-map-btn{
+      display:inline-block;
+      background:#0b6b45;
+      color:#fff !important;
+      text-decoration:none;
+      padding:15px 24px;
+      border-radius:14px;
+      font-size:16px;
+      font-weight:800;
+      box-shadow:0 8px 20px rgba(0,0,0,.15);
+    }
+    .google-map-btn:hover{
+      transform:translateY(-2px);
+      background:#075235;
+    }
+
+    @media (max-width:700px){
+      .contact-section{padding:32px 16px 42px;}
+      .location-card{padding:30px 20px; border-radius:24px;}
+      .location-icon{font-size:38px;}
+      .location-card h3{font-size:24px;}
+      .location-card p{
+        font-size:18px;
+        line-height:1.6;
+      }
+      .google-map-btn{
+        width:100%;
+        box-sizing:border-box;
+        font-size:14px;
+        padding:15px 12px;
+      }
+    }
+
+
+    /* SLIGHTLY LARGER CENTER NAME */
+    @media (max-width:1200px) and (min-width:901px){
+      .center-name{
+        font-size:clamp(26px,2.65vw,37px);
+        letter-spacing:-1px;
+      }
+    }
+
+
+    /* FINAL CENTER NAME: COMPACT + BOLD */
+    .center-name{
+      font-size:clamp(30px,2.9vw,44px) !important;
+      line-height:.96 !important;
+      letter-spacing:-2.2px !important;
+      font-weight:950 !important;
+      white-space:nowrap !important;
+      transform:scaleX(.96);
+      transform-origin:left center;
+      margin-bottom:8px !important;
+    }
+    @media (max-width:1200px) and (min-width:901px){
+      .center-name{font-size:clamp(28px,2.75vw,40px) !important;letter-spacing:-1.8px !important;}
+    }
+    @media (max-width:900px){
+      .center-name{
+        white-space:normal !important;
+        transform:none;
+        font-size:clamp(32px,8vw,42px) !important;
+        letter-spacing:-1.5px !important;
+        line-height:1.08 !important;
+      }
+    }
+
+</style>
+</head>
+
+<body>
+
+  <!-- TOP HEADER -->
+  <div class="topbar">
+    <div class="top-left">
+      🎓 Empowering Students. Building Better Futures.
+    </div>
+
+    <div class="top-center">
+      ❖ ॥ श्री गणेशाय नमः ॥ ❖
+    </div>
+
+    <div class="top-right">
+      🕘 Mon - Sat : 9:00 AM - 7:00 PM
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header>
+    <div class="main-header">
+
+      <div class="logo-wrap">
+        <div class="logo">
+          <div class="logo-icon">🖥️</div>
+          <div class="logo-text">SSCE</div>
+        </div>
+      </div>
+
+      <div class="branding">
+        <h1 class="center-name">SHREE SHYAM COMPUTER EDUCATION</h1>
+        <div class="hindi-name">श्री श्याम कम्प्यूटर एजुकेशन</div>
+        <div class="code-badge">Center Code: 32290325</div>
+      </div>
+
+      <div class="contact-box">
+        <div class="contact-line">
+          <div class="contact-icon">📞</div>
+          <div>Phone: 01586-299472</div>
+        </div>
+
+        <div class="contact-line">
+          <div class="contact-icon">🟢</div>
+          <div>Mobile / WhatsApp: 917231905659</div>
+        </div>
+
+        <div class="contact-line">
+          <div class="contact-icon">✉</div>
+          <div>Email: sscemaroth@gmail.com</div>
+        </div>
+
+        <button class="enquiry-btn" onclick="openAdmission()">
+          🧑‍🎓 ENQUIRY NOW
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-wrap">
+      <a href="#home">🏠 HOME</a>
+      <a href="#about">👥 ABOUT US</a>
+      <a href="#courses">📖 COURSES</a>
+      <a href="#services">🌐 SERVICES</a>
+      <a href="#gallery">🖼 GALLERY</a>
+      <a href="#admission">🎓 ADMISSION</a>
+      <a href="#contact">📞 CONTACT</a>
+    </div>
+  </nav>
+
+  <!-- THREE HEADER PHOTOS -->
+  <div class="photo-section" id="home">
+    <div class="photo-grid">
+
+      <div class="dev-card">
+        <img src="images/ramji.jpg" alt="Shri Ram">
+        <div class="photo-caption">श्री राम</div>
+      </div>
+
+      <div class="dev-card">
+        <img src="images/ganeshji.jpg" alt="Shri Ganesh">
+        <div class="photo-caption">श्री गणेश</div>
+      </div>
+
+      <div class="dev-card">
+        <img src="images/shyambaba.jpg" alt="Shri Shyam Baba">
+        <div class="photo-caption">श्री श्याम बाबा</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2 class="section-title">ABOUT US</h2>
+    <p class="section-subtitle">श्री श्याम कम्प्यूटर एजुकेशन</p>
+
+    <div class="about-box">
+      <p>
+        SHREE SHYAM COMPUTER EDUCATION विद्यार्थियों को गुणवत्तापूर्ण
+        कंप्यूटर शिक्षा, डिजिटल कौशल, RS-CIT, RS-CFA / TALLY तथा अन्य
+        रोजगार उपयोगी कम्प्यूटर प्रशिक्षण प्रदान करने के लिए समर्पित है।
+      </p>
+      <p>
+        हमारा उद्देश्य विद्यार्थियों को आधुनिक कम्प्यूटर ज्ञान और व्यावहारिक
+        प्रशिक्षण देकर बेहतर भविष्य के लिए तैयार करना है।
+      </p>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section class="courses" id="courses">
+    <h2 class="section-title">OUR COURSES</h2>
+    <p class="section-subtitle">
+      कम्प्यूटर शिक्षा और डिजिटल कौशल के लिए हमारे कोर्स
+    </p>
+
+    <div class="course-grid">
+
+      <div class="course-card">
+        <div class="course-icon">💻</div>
+        <h3>RS-CIT</h3>
+        <p>
+          Computer fundamentals, internet, digital skills and practical training.
+        </p>
+        <button class="apply-btn" onclick="openAdmission('RS-CIT')">
+          APPLY NOW
+        </button>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">📊</div>
+        <h3>RS-CFA / TALLY</h3>
+        <p>
+          Accounting, financial knowledge and practical Tally training.
+        </p>
+        <button class="apply-btn" onclick="openAdmission('RS-CFA / TALLY')">
+          APPLY NOW
+        </button>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">⌨️</div>
+        <h3>BCC AND OTHER COURSES</h3>
+        <p>
+          Basic computer knowledge and other useful computer courses.
+        </p>
+        <button class="apply-btn" onclick="openAdmission('BCC AND OTHER COURSES')">
+          APPLY NOW
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <h2 class="section-title">OUR SERVICES</h2>
+    <p class="section-subtitle">
+      बेहतर शिक्षा और विद्यार्थियों के लिए हमारी सुविधाएं
+    </p>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🖥</div>
+        <h4>QUALITY EDUCATION</h4>
+        <p>Practical and modern computer education for strong foundations.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📜</div>
+        <h4>CERTIFIED COURSES</h4>
+        <p>Government approved and career-oriented certified courses.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🧑‍💻</div>
+        <h4>PRACTICAL TRAINING</h4>
+        <p>Hands-on practical training to improve professional skills.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🤝</div>
+        <h4>CAREER GUIDANCE</h4>
+        <p>Guidance and support to help students choose a better career.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎧</div>
+        <h4>STUDENT SUPPORT</h4>
+        <p>Helpful support for student queries and course-related guidance.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <h2 class="section-title">OUR GALLERY</h2>
+    <p class="section-subtitle">
+      हमारे कंप्यूटर सेंटर की झलकियां
+    </p>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-card" onclick="openLightbox('images/gallery1.jpg')">
+        <img src="images/gallery1.jpg" alt="SSCE Computer Center">
+        <div class="gallery-caption">SSCE Computer Center</div>
+      </div>
+
+      <div class="gallery-card" onclick="openLightbox('images/gallery6.jpg')">
+        <img src="images/gallery6.jpg" alt="Computer Lab">
+        <div class="gallery-caption">Computer Lab</div>
+      </div>
+
+      <div class="gallery-card" onclick="openLightbox('images/gallery2.jpg')">
+        <img src="images/gallery2.jpg" alt="Office View">
+        <div class="gallery-caption">Office View</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ADMISSION -->
+  <section class="admission" id="admission">
+    <h2 class="section-title">ONLINE ADMISSION</h2>
+
+    <div class="admission-box">
+      <p>
+        प्रवेश के लिए नीचे दिए गए बटन पर क्लिक करके Admission Form भरें।
+        Form submit करने के बाद आपकी जानकारी WhatsApp पर भेजने का विकल्प खुलेगा।
+      </p>
+
+      <button class="big-apply" onclick="openAdmission()">
+        📝 OPEN ADMISSION FORM
+      </button>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  
+<section id="contact" class="contact-section">
+  <div class="section-title">
+    <h2>CONTACT US</h2>
+  </div>
+
+  <div class="contact-location-wrap">
+    <div class="location-card">
+      <div class="location-icon">📍</div>
+      <h3>OUR ADDRESS</h3>
+      <p>
+        Opposite Jain Bhawan,<br>
+        Main Market, Maroth,<br>
+        Tehsil Nawa, District Didwana-Kuchaman,<br>
+        Rajasthan – 341507
+      </p>
+
+      <a class="google-map-btn"
+         href="https://maps.app.goo.gl/LaiHN2VyPK3ShskG8"
+         target="_blank"
+         rel="noopener">
+         📍 VIEW LOCATION ON GOOGLE MAPS
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 SHREE SHYAM COMPUTER EDUCATION | MAROTH
+    </p>
+    <p>
+      CENTER CODE: 32290325
+    </p>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <a class="floating-call" href="tel:01586299472">
+    📞 Call
+  </a>
+
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/917231905659"
+    target="_blank">
+    🟢 WhatsApp
+  </a>
+
+  <!-- ADMISSION MODAL -->
+  <div class="modal" id="admissionModal">
+    <div class="modal-content">
+
+      <span class="close-modal" onclick="closeAdmission()">&times;</span>
+
+      <h2>STUDENT ADMISSION FORM</h2>
+      <p class="small-text">
+        फॉर्म भरने के बाद WhatsApp पर details भेजी जाएंगी।
+      </p>
+
+      <form id="admissionForm">
+
+        <input
+          type="text"
+          id="studentName"
+          placeholder="Student Name *"
+          required>
+
+        <input
+          type="text"
+          id="fatherName"
+          placeholder="Father's Name *"
+          required>
+
+        <input
+          type="tel"
+          id="mobile"
+          placeholder="Mobile Number *"
+          required>
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Email ID">
+
+        <select id="course" required>
+          <option value="">Select Course *</option>
+          <option value="RS-CIT">RS-CIT</option>
+          <option value="RS-CFA / TALLY">RS-CFA / TALLY</option>
+          <option value="BCC AND OTHER COURSES">
+            BCC AND OTHER COURSES
+          </option>
+        </select>
+
+        <select id="qualification" required>
+          <option value="">Select Qualification *</option>
+          <option>8th Pass</option>
+          <option>10th Pass</option>
+          <option>12th Pass</option>
+          <option>Graduate</option>
+          <option>Other</option>
+        </select>
+
+        <textarea
+          id="address"
+          placeholder="Full Address *"
+          required></textarea>
+
+        <textarea
+          id="message"
+          placeholder="Message / Query"></textarea>
+
+        <button type="submit" class="submit-btn">
+          SUBMIT & SEND ON WHATSAPP
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImage" src="" alt="Gallery Image">
+  </div>
+
+  <script>
+    const modal = document.getElementById("admissionModal");
+    const courseSelect = document.getElementById("course");
+
+    function openAdmission(courseName = "") {
+      modal.style.display = "block";
+
+      if (courseName !== "") {
+        courseSelect.value = courseName;
+      }
+    }
+
+    function closeAdmission() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        closeAdmission();
+      }
+    };
+
+    document
+      .getElementById("admissionForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const studentName =
+          document.getElementById("studentName").value;
+
+        const fatherName =
+          document.getElementById("fatherName").value;
+
+        const mobile =
+          document.getElementById("mobile").value;
+
+        const email =
+          document.getElementById("email").value;
+
+        const course =
+          document.getElementById("course").value;
+
+        const qualification =
+          document.getElementById("qualification").value;
+
+        const address =
+          document.getElementById("address").value;
+
+        const message =
+          document.getElementById("message").value;
+
+        const whatsappNumber = "917231905659";
+
+        const text =
+`NEW ADMISSION ENQUIRY - SSCE
+
+Student Name: ${studentName}
+Father's Name: ${fatherName}
+Mobile: ${mobile}
+Email: ${email}
+Course: ${course}
+Qualification: ${qualification}
+Address: ${address}
+Message: ${message}`;
+
+        const whatsappURL =
+          "https://wa.me/" +
+          whatsappNumber +
+          "?text=" +
+          encodeURIComponent(text);
+
+        window.open(whatsappURL, "_blank");
+
+        closeAdmission();
+        this.reset();
+      });
+
+    function openLightbox(imageSrc) {
+      document.getElementById("lightboxImage").src = imageSrc;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
