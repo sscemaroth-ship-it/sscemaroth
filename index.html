@@ -4,1336 +4,1007 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Shree Shyam Computer Education Maroth - Computer Courses, RSCIT, Tally and Online Services">
+<meta name="description" content="SHREE SHYAM COMPUTER EDUCATION - Computer Courses, RS-CIT, Admissions and Training Center">
 
-<title>SHREE SHYAM COMPUTER EDUCATION | SSCE MAROTH</title>
+<title>SHREE SHYAM COMPUTER EDUCATION | श्री श्याम कंप्यूटर एजुकेशन</title>
 
 <style>
 :root{
-  --green-dark:#033d20;
-  --green:#075c32;
-  --green-light:#0b7a42;
-  --lightgreen:#aee7b4;
-  --gold:#f6c343;
-  --gold-dark:#d9a51d;
-  --white:#ffffff;
-  --maroon:#651c2b;
-  --cream:#f7fbf8;
-  --text:#18231d;
+    --green:#0b6b4a;
+    --dark-green:#063d2b;
+    --light-green:#dff6df;
+    --gold:#c89b3c;
+    --light-gold:#f7e7b8;
+    --white:#ffffff;
+    --cream:#fffdf5;
+    --dark:#17231d;
+    --shadow:0 12px 35px rgba(0,0,0,.12);
 }
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,"Noto Sans Devanagari",sans-serif;
-  background:var(--cream);
-  color:var(--text);
-  line-height:1.6;
+    font-family:Arial, "Noto Sans Devanagari", sans-serif;
+    background:var(--cream);
+    color:#222;
+    line-height:1.6;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
+/* ================= HEADER PHOTOS ================= */
+
+.header-photo-strip{
+    width:100%;
+    background:#102219;
+    padding:10px;
+    border-bottom:4px solid var(--gold);
 }
 
-button{
-  font-family:inherit;
-}
-
-/* TOP BAR */
-
-.top-bar{
-  background:linear-gradient(90deg,var(--maroon),var(--green-dark));
-  color:white;
-  text-align:center;
-  padding:8px 5%;
-  font-size:14px;
-}
-
-/* HEADER */
-
-header{
-  background:
-  radial-gradient(circle at center,rgba(246,195,67,.15),transparent 30%),
-  linear-gradient(135deg,#022f19,#075c32,#651c2b);
-  padding:12px 5% 20px;
-  border-bottom:4px solid var(--gold);
-}
-
-/* THREE HEADER PHOTOS */
-
-.header-images{
-  max-width:1150px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1fr 1.2fr 1fr;
-  gap:12px;
-  align-items:center;
-  padding:10px;
+.header-photo-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    max-width:1500px;
+    margin:auto;
 }
 
 .header-photo{
-  height:220px;
-  padding:4px;
-  border-radius:18px;
-
-  background:linear-gradient(
-    135deg,
-    #8a6815,
-    #f6c343,
-    #fff5b0,
-    #d9a51d,
-    #ffffff,
-    #f6c343
-  );
-
-  box-shadow:
-  0 8px 22px rgba(246,195,67,.45),
-  inset 0 0 8px rgba(255,255,255,.8);
-
-  overflow:hidden;
+    width:100%;
+    height:250px;
+    border:3px solid var(--gold);
+    border-radius:10px;
+    overflow:hidden;
+    background:#111;
+    box-shadow:0 5px 18px rgba(0,0,0,.35);
 }
 
 .header-photo img{
-  width:100%;
-  height:100%;
-  display:block;
-
-  object-fit:contain;
-  object-position:center;
-
-  background:#fff;
-  border-radius:14px;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+    background:#111;
 }
 
-/* CENTER PHOTO PREMIUM */
+/* ================= MAIN HEADER ================= */
 
-.header-photo:nth-child(2){
-  height:240px;
-  transform:scale(1.03);
-  z-index:2;
-
-  box-shadow:
-  0 10px 30px rgba(246,195,67,.65),
-  0 0 15px rgba(255,255,255,.3);
+.main-header{
+    background:linear-gradient(135deg,var(--dark-green),var(--green),#0f7d53);
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    border-bottom:5px solid var(--gold);
+    position:relative;
 }
 
-/* CENTER NAME */
-
-.center-title{
-  max-width:1250px;
-  margin:10px auto 0;
-  text-align:center;
+.main-header::before{
+    content:"";
+    position:absolute;
+    inset:8px;
+    border:1px solid rgba(255,255,255,.35);
+    pointer-events:none;
 }
 
-.center-title h1{
-  font-size:clamp(30px,5vw,62px);
-  font-weight:900;
-  line-height:1.1;
-  letter-spacing:1px;
-  text-shadow:0 3px 10px rgba(0,0,0,.5);
+.brand{
+    position:relative;
+    z-index:2;
+    max-width:1200px;
+    margin:auto;
 }
 
-.gold{
-  color:var(--gold);
+.brand h1{
+    color:#e6ffd8;
+    font-size:clamp(28px,4vw,52px);
+    letter-spacing:1px;
+    text-shadow:2px 2px 0 rgba(0,0,0,.25);
+    margin-bottom:5px;
 }
 
-.white{
-  color:white;
+.brand h2{
+    color:#fff7df;
+    font-size:clamp(24px,3.5vw,44px);
+    font-weight:700;
+    margin-bottom:18px;
 }
 
-.lightgreen{
-  color:var(--lightgreen);
+.header-details{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    max-width:950px;
+    margin:auto;
+    padding-top:12px;
+    border-top:1px solid rgba(255,255,255,.35);
+    font-size:17px;
 }
 
-.center-title h2{
-  color:white;
-  font-size:clamp(20px,3vw,32px);
-  margin-top:8px;
-  text-shadow:0 2px 5px rgba(0,0,0,.4);
+.header-details strong{
+    color:var(--light-gold);
 }
 
-.center-info{
-  margin-top:14px;
-  padding-top:12px;
-  border-top:1px solid rgba(255,255,255,.35);
-
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  flex-wrap:wrap;
-
-  color:white;
-  font-size:15px;
-  font-weight:bold;
-}
-
-/* NAVIGATION */
+/* ================= NAVIGATION ================= */
 
 nav{
-  background:white;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-
-  position:sticky;
-  top:0;
-  z-index:1000;
-
-  box-shadow:0 4px 15px rgba(0,0,0,.12);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    box-shadow:0 3px 15px rgba(0,0,0,.12);
+    border-bottom:2px solid var(--light-gold);
 }
 
-nav a{
-  color:var(--green-dark);
-  padding:15px 18px;
-  font-weight:bold;
-  transition:.3s;
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
-nav a:hover{
-  background:var(--green-soft);
-  color:var(--maroon);
+.nav-container a{
+    text-decoration:none;
+    color:var(--dark-green);
+    font-weight:700;
+    padding:17px 24px;
+    transition:.3s;
 }
 
-/* HERO */
-
-.hero{
-  min-height:500px;
-  padding:90px 7%;
-  text-align:center;
-
-  background:
-  radial-gradient(circle at 50% 10%,rgba(246,195,67,.2),transparent 25%),
-  linear-gradient(135deg,#f5faf6,#e4f3e8);
+.nav-container a:hover{
+    background:var(--light-green);
+    color:var(--green);
 }
 
-.hero h1{
-  font-size:clamp(38px,6vw,70px);
-  color:var(--green-dark);
-  line-height:1.1;
-}
-
-.hero h1 span{
-  color:var(--maroon);
-}
-
-.hero p{
-  max-width:800px;
-  margin:20px auto;
-  font-size:18px;
-  color:#52685a;
-}
-
-/* BUTTONS */
-
-.btn{
-  display:inline-block;
-  border:none;
-  cursor:pointer;
-
-  padding:15px 25px;
-  margin:10px 5px;
-
-  border-radius:10px;
-  font-size:15px;
-  font-weight:bold;
-
-  transition:.3s;
-}
-
-.btn:hover{
-  transform:translateY(-3px);
-}
-
-.btn-gold{
-  background:linear-gradient(135deg,var(--gold),#ffe181);
-  color:#3d3100;
-
-  box-shadow:0 8px 20px rgba(246,195,67,.35);
-}
-
-.btn-green{
-  background:linear-gradient(135deg,var(--green-dark),var(--green-light));
-  color:white;
-}
-
-/* COMMON SECTION */
+/* ================= GENERAL ================= */
 
 section{
-  padding:70px 7%;
+    padding:75px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
 }
 
 .section-title{
-  text-align:center;
-  margin-bottom:40px;
+    text-align:center;
+    margin-bottom:45px;
 }
 
 .section-title h2{
-  color:var(--green-dark);
-  font-size:clamp(30px,4vw,42px);
+    color:var(--dark-green);
+    font-size:clamp(30px,4vw,44px);
+    margin-bottom:7px;
+}
+
+.section-title h2 span{
+    color:var(--gold);
 }
 
 .section-title p{
-  color:#68766d;
+    color:#666;
+    font-size:18px;
 }
 
-/* COURSES */
+/* ================= HERO ================= */
+
+.hero{
+    background:linear-gradient(135deg,rgba(6,61,43,.95),rgba(11,107,74,.88));
+    color:white;
+    padding:85px 20px;
+    text-align:center;
+}
+
+.hero-content{
+    max-width:950px;
+    margin:auto;
+}
+
+.hero h2{
+    color:var(--light-gold);
+    font-size:clamp(34px,5vw,60px);
+    margin-bottom:15px;
+}
+
+.hero h3{
+    color:#e5ffdf;
+    font-size:clamp(24px,3vw,38px);
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:19px;
+    max-width:800px;
+    margin:0 auto 30px;
+}
+
+.btn{
+    border:none;
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:30px;
+    font-size:17px;
+    font-weight:bold;
+    transition:.3s;
+    margin:5px;
+}
+
+.btn-gold{
+    background:linear-gradient(135deg,#f8df95,var(--gold));
+    color:#263326;
+    box-shadow:0 6px 15px rgba(0,0,0,.2);
+}
+
+.btn-gold:hover{
+    transform:translateY(-3px);
+}
+
+.btn-white{
+    background:white;
+    color:var(--dark-green);
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:center;
+}
+
+.about-card{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    border:2px solid var(--light-gold);
+    box-shadow:var(--shadow);
+}
+
+.about-card h3{
+    color:var(--green);
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:20px;
+}
+
+.feature{
+    background:var(--light-green);
+    padding:15px;
+    border-left:5px solid var(--gold);
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* ================= COURSES ================= */
 
 .courses{
-  background:white;
+    background:#f2f9f1;
 }
 
 .course-grid{
-  max-width:1200px;
-  margin:auto;
-
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:22px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
 .course-card{
-  background:#fff;
-  border-radius:20px;
-  padding:28px 20px;
-  text-align:center;
-
-  border:1px solid #dce9df;
-  border-top:5px solid var(--gold);
-
-  box-shadow:0 10px 30px rgba(0,0,0,.1);
-
-  transition:.3s;
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    text-align:center;
+    border:1px solid var(--light-gold);
+    box-shadow:var(--shadow);
+    transition:.3s;
 }
 
 .course-card:hover{
-  transform:translateY(-8px);
+    transform:translateY(-7px);
 }
 
 .course-icon{
-  font-size:50px;
-  margin-bottom:12px;
+    width:75px;
+    height:75px;
+    margin:0 auto 18px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    background:var(--light-green);
+    border:3px solid var(--gold);
 }
 
 .course-card h3{
-  color:var(--green-dark);
-  font-size:21px;
+    color:var(--dark-green);
+    font-size:25px;
+    margin-bottom:10px;
 }
 
-.course-card p{
-  color:#64736a;
-  margin:12px 0;
+.course-card .hindi{
+    color:#777;
+    margin-bottom:18px;
 }
 
-.fee{
-  font-size:25px;
-  color:var(--green);
-  font-weight:bold;
-  margin:15px 0;
-}
-
-/* GALLERY */
+/* ================= GALLERY ================= */
 
 .gallery{
-  background:#f4f8f5;
+    background:white;
 }
 
 .gallery-grid{
-  max-width:1200px;
-  margin:auto;
-
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.gallery-item{
-  background:white;
-  border-radius:18px;
-  overflow:hidden;
-  cursor:pointer;
-
-  border:3px solid transparent;
-
-  box-shadow:0 10px 25px rgba(0,0,0,.15);
-
-  transition:.3s;
+.gallery-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    border:2px solid var(--light-gold);
+    box-shadow:var(--shadow);
+    cursor:pointer;
+    transition:.3s;
 }
 
-.gallery-item:hover{
-  transform:translateY(-5px);
-  border-color:var(--gold);
+.gallery-card:hover{
+    transform:translateY(-6px);
 }
 
-.gallery-item img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  display:block;
-  transition:.4s;
+.gallery-image{
+    width:100%;
+    height:270px;
+    background:#eee;
+    overflow:hidden;
 }
 
-.gallery-item:hover img{
-  transform:scale(1.06);
+.gallery-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
 }
 
-.gallery-item p{
-  padding:12px;
-  color:var(--green-dark);
-  font-weight:bold;
-  text-align:center;
+.gallery-card:hover img{
+    transform:scale(1.05);
 }
 
-/* FULLSCREEN GALLERY */
-
-#lightbox{
-  display:none;
-
-  position:fixed;
-  inset:0;
-
-  background:rgba(0,0,0,.95);
-
-  z-index:5000;
-
-  align-items:center;
-  justify-content:center;
+.gallery-caption{
+    padding:18px 12px;
+    text-align:center;
 }
 
-#lightbox.show{
-  display:flex;
+.gallery-caption h3{
+    color:var(--dark-green);
+    font-size:21px;
 }
 
-#lightbox img{
-  max-width:92%;
-  max-height:85vh;
-  object-fit:contain;
+.gallery-caption p{
+    color:#777;
+    font-size:16px;
+    margin-top:3px;
 }
 
-.lightbox-close,
-.lightbox-prev,
-.lightbox-next{
-  position:absolute;
+/* ================= ADMISSION ================= */
 
-  border:none;
-  color:white;
-  background:rgba(255,255,255,.18);
-
-  cursor:pointer;
-
-  font-size:35px;
-  padding:6px 15px;
-
-  border-radius:10px;
+.admission{
+    background:linear-gradient(135deg,var(--dark-green),var(--green));
+    color:white;
 }
 
-.lightbox-close{
-  top:18px;
-  right:20px;
+.admission-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    padding:45px 25px;
+    border:2px solid var(--gold);
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
 }
 
-.lightbox-prev{
-  left:20px;
-  top:50%;
+.admission h2{
+    color:var(--light-gold);
+    font-size:40px;
+    margin-bottom:10px;
 }
 
-.lightbox-next{
-  right:20px;
-  top:50%;
+.admission p{
+    margin-bottom:25px;
+    font-size:18px;
 }
 
-/* ABOUT */
-
-.about{
-  background:linear-gradient(135deg,var(--green-dark),var(--green),var(--maroon));
-  color:white;
-  text-align:center;
-}
-
-.about h2{
-  color:var(--gold);
-  font-size:40px;
-  margin-bottom:20px;
-}
-
-.about p{
-  max-width:900px;
-  margin:auto;
-  font-size:18px;
-}
-
-/* CONTACT */
-
-.contact{
-  background:#f6faf7;
-}
+/* ================= CONTACT ================= */
 
 .contact-grid{
-  max-width:1200px;
-  margin:auto;
-
-  display:grid;
-  grid-template-columns:1fr 1.2fr;
-  gap:25px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
 }
 
-.contact-card,
-.map-card{
-  background:white;
-  padding:30px;
-
-  border-radius:22px;
-
-  box-shadow:0 10px 30px rgba(0,0,0,.1);
+.contact-card{
+    background:white;
+    border:2px solid var(--light-gold);
+    border-radius:18px;
+    padding:30px;
+    box-shadow:var(--shadow);
 }
 
 .contact-card h3{
-  color:var(--green-dark);
-  font-size:26px;
-  margin-bottom:15px;
+    color:var(--dark-green);
+    font-size:28px;
+    margin-bottom:20px;
 }
 
-.contact-card p{
-  margin-bottom:12px;
+.contact-item{
+    padding:14px 0;
+    border-bottom:1px solid #eee;
 }
 
-.map-card{
-  padding:8px;
+.map-box{
+    overflow:hidden;
+    border-radius:18px;
+    border:2px solid var(--light-gold);
+    min-height:420px;
+    box-shadow:var(--shadow);
 }
 
-.map-card iframe{
-  width:100%;
-  height:420px;
-  border:0;
-  border-radius:18px;
+.map-box iframe{
+    width:100%;
+    height:420px;
+    border:0;
 }
 
-/* ADMISSION MODAL */
+/* ================= FOOTER ================= */
 
-#admissionModal{
-  display:none;
-
-  position:fixed;
-  inset:0;
-
-  z-index:6000;
-
-  background:rgba(0,0,0,.78);
-
-  align-items:center;
-  justify-content:center;
-
-  padding:15px;
+footer{
+    background:#092b20;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+    border-top:4px solid var(--gold);
 }
 
-#admissionModal.show{
-  display:flex;
+footer strong{
+    color:var(--light-gold);
 }
 
-.form-box{
-  width:min(750px,100%);
-  max-height:90vh;
+/* ================= MODAL ================= */
 
-  overflow-y:auto;
-
-  background:white;
-  padding:30px;
-
-  border-radius:22px;
-
-  position:relative;
-
-  border-top:5px solid var(--gold);
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.72);
+    z-index:3000;
+    align-items:center;
+    justify-content:center;
+    padding:15px;
 }
 
-.form-box h2{
-  color:var(--green-dark);
-  margin-bottom:8px;
+.modal.active{
+    display:flex;
 }
 
-.close-form{
-  position:absolute;
-  top:12px;
-  right:15px;
-
-  width:40px;
-  height:40px;
-
-  border:none;
-  border-radius:50%;
-
-  cursor:pointer;
-
-  font-size:25px;
+.modal-content{
+    width:100%;
+    max-width:620px;
+    max-height:95vh;
+    overflow:auto;
+    background:white;
+    border-radius:18px;
+    padding:28px;
+    position:relative;
+    border:3px solid var(--gold);
 }
 
-.form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
+.close-modal{
+    position:absolute;
+    right:16px;
+    top:10px;
+    font-size:32px;
+    cursor:pointer;
+    color:#a00000;
+    border:none;
+    background:none;
+}
 
-  margin-top:20px;
+.modal-content h2{
+    color:var(--dark-green);
+    margin-bottom:5px;
+    padding-right:35px;
+}
+
+.modal-content .subtitle{
+    color:#777;
+    margin-bottom:20px;
+}
+
+.form-group{
+    margin-bottom:15px;
 }
 
 .form-group label{
-  display:block;
-  font-weight:bold;
-  margin-bottom:5px;
+    display:block;
+    margin-bottom:6px;
+    font-weight:bold;
+    color:var(--dark-green);
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea{
-  width:100%;
-
-  padding:12px;
-
-  border:1px solid #cbded1;
-  border-radius:8px;
-
-  font-size:15px;
+    width:100%;
+    padding:13px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
 }
 
 .form-group textarea{
-  min-height:100px;
-  resize:vertical;
+    min-height:90px;
+    resize:vertical;
 }
 
-.full{
-  grid-column:1 / -1;
+.form-submit{
+    width:100%;
+    margin-top:8px;
 }
 
-/* FLOATING WHATSAPP */
+/* ================= FULL SCREEN IMAGE ================= */
 
-.whatsapp-float{
-  position:fixed;
-
-  right:18px;
-  bottom:18px;
-
-  background:#25a657;
-  color:white;
-
-  padding:14px 20px;
-
-  border-radius:30px;
-
-  font-weight:bold;
-
-  box-shadow:0 8px 20px rgba(0,0,0,.2);
-
-  z-index:2000;
-}
-
-/* FOOTER */
-
-footer{
-  background:#022f19;
-  color:white;
-
-  text-align:center;
-
-  padding:30px;
-
-  border-top:4px solid var(--gold);
-}
-
-/* RESPONSIVE */
-
-@media(max-width:1000px){
-
-  .course-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .header-photo{
-    height:180px;
-  }
-
-  .header-photo:nth-child(2){
-    height:195px;
-  }
-
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:700px){
-
-  .header-images{
-    gap:5px;
-    padding:5px;
-  }
-
-  .header-photo{
-    height:135px;
-    padding:2px;
-    border-radius:10px;
-  }
-
-  .header-photo img{
-    border-radius:7px;
-  }
-
-  .header-photo:nth-child(2){
-    height:145px;
-    transform:scale(1.01);
-  }
-
-  .center-info{
+.image-modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:4000;
+    background:rgba(0,0,0,.93);
+    align-items:center;
     justify-content:center;
-    text-align:center;
-  }
-
-  nav a{
-    padding:10px 8px;
-    font-size:12px;
-  }
-
-  .gallery-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-  }
-
-  .gallery-item img{
-    height:190px;
-  }
+    padding:25px;
 }
 
-@media(max-width:500px){
+.image-modal.active{
+    display:flex;
+}
 
-  .course-grid,
-  .gallery-grid,
-  .form-grid{
-    grid-template-columns:1fr;
-  }
+.image-modal img{
+    max-width:96%;
+    max-height:90vh;
+    object-fit:contain;
+    border:3px solid var(--gold);
+    border-radius:8px;
+}
 
-  .full{
-    grid-column:auto;
-  }
+.image-close{
+    position:absolute;
+    top:18px;
+    right:25px;
+    color:white;
+    font-size:42px;
+    cursor:pointer;
+}
 
-  .hero{
-    padding:70px 6%;
-  }
+/* ================= WHATSAPP BUTTON ================= */
 
-  section{
-    padding:55px 5%;
-  }
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:2000;
+    background:#25d366;
+    color:white;
+    text-decoration:none;
+    padding:15px 22px;
+    border-radius:35px;
+    font-weight:bold;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+}
 
-  .header-photo{
-    height:115px;
-  }
+/* ================= RESPONSIVE ================= */
 
-  .header-photo:nth-child(2){
-    height:125px;
-  }
+@media(max-width:900px){
 
-  .center-title h1{
-    font-size:28px;
-  }
+    .header-photo{
+        height:190px;
+    }
 
-  .center-title h2{
-    font-size:20px;
-  }
+    .course-grid,
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .header-photo-strip{
+        padding:5px;
+    }
+
+    .header-photo-grid{
+        gap:4px;
+    }
+
+    .header-photo{
+        height:125px;
+        border-width:1px;
+        border-radius:5px;
+    }
+
+    .main-header{
+        padding:20px 10px;
+    }
+
+    .header-details{
+        flex-direction:column;
+        gap:7px;
+        font-size:15px;
+    }
+
+    .nav-container{
+        justify-content:flex-start;
+        overflow-x:auto;
+        flex-wrap:nowrap;
+    }
+
+    .nav-container a{
+        padding:13px 15px;
+        white-space:nowrap;
+        font-size:14px;
+    }
+
+    section{
+        padding:55px 15px;
+    }
+
+    .course-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-image{
+        height:250px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:65px 15px;
+    }
+
+    .modal-content{
+        padding:24px 18px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="top-bar">
-🎓 Empowering Students • Building Better Futures • Maroth, Rajasthan
+<!-- HEADER PHOTOS -->
+<div class="header-photo-strip">
+    <div class="header-photo-grid">
+
+        <div class="header-photo">
+            <img src="images/ramji.jpg" alt="Shri Ram">
+        </div>
+
+        <div class="header-photo">
+            <img src="images/ganeshji.jpg" alt="Shri Ganesh">
+        </div>
+
+        <div class="header-photo">
+            <img src="images/shyambaba.jpg" alt="Shri Shyam Baba">
+        </div>
+
+    </div>
 </div>
 
-<header>
+<!-- MAIN HEADER -->
+<header class="main-header">
+    <div class="brand">
 
-<div class="header-images">
+        <h1>SHREE SHYAM COMPUTER EDUCATION</h1>
+        <h2>श्री श्याम कंप्यूटर एजुकेशन</h2>
 
-  <!-- LEFT : RAM JI -->
-  <div class="header-photo">
-    <img src="images/ramji.jpg" alt="Shri Ram Ji">
-  </div>
+        <div class="header-details">
+            <div><strong>Center Code:</strong> 32290325</div>
+            <div><strong>Email ID:</strong> sscemaroth@gmail.com</div>
+        </div>
 
-  <!-- CENTER : GANESH JI -->
-  <div class="header-photo">
-    <img src="images/ganeshji.jpg" alt="Shri Ganesh Ji">
-  </div>
-
-  <!-- RIGHT : SHYAM BABA -->
-  <div class="header-photo">
-    <img src="images/shyambaba.jpg" alt="Shri Shyam Baba">
-  </div>
-
-</div>
-
-<div class="center-title">
-
-<h1>
-  <span class="gold">SHREE</span>
-  <span class="white">SHYAM</span>
-  <span class="lightgreen">COMPUTER</span>
-  <span class="gold">EDUCATION</span>
-</h1>
-
-<h2>श्री श्याम कंप्यूटर एजुकेशन</h2>
-
-<div class="center-info">
-  <span>🎓 CENTER CODE: 32290325</span>
-  <span>✉ sscemaroth@gmail.com</span>
-</div>
-
-</div>
-
+    </div>
 </header>
 
+<!-- NAVIGATION -->
 <nav>
-<a href="#home">🏠 Home</a>
-<a href="#about">🏫 About Us</a>
-<a href="#courses">📚 Courses</a>
-<a href="#gallery">📸 Gallery</a>
-<a href="#admission">🎓 Admission</a>
-<a href="#contact">📍 Contact</a>
+    <div class="nav-container">
+        <a href="#home">🏠 Home</a>
+        <a href="#about">🏫 About Us</a>
+        <a href="#courses">📚 Courses</a>
+        <a href="#gallery">🖼️ Gallery</a>
+        <a href="#admission">🎓 Admission</a>
+        <a href="#contact">📍 Contact</a>
+    </div>
 </nav>
 
+<!-- HOME -->
 <section class="hero" id="home">
+    <div class="hero-content">
 
-<h1>
-WELCOME TO <span>SSCE MAROTH</span>
-</h1>
+        <h2>Welcome to SSCE Computer Center</h2>
+        <h3>श्री श्याम कंप्यूटर एजुकेशन</h3>
 
-<p>
-Learn Computer Skills for a Better Future.<br>
-बेहतर भविष्य के लिए कंप्यूटर कौशल सीखें।
-</p>
+        <p>
+            Computer education, digital skills and professional training
+            for students. Learn with practical computer knowledge and
+            build your future.
+        </p>
 
-<button class="btn btn-gold" onclick="openAdmission('RSCIT REGULAR')">
-🎓 RSCIT APPLY NOW
-</button>
+        <a href="#courses" class="btn btn-gold">
+            Explore Courses / कोर्स देखें
+        </a>
 
-<a href="#courses" class="btn btn-green">
-📚 EXPLORE COURSES
-</a>
+        <button class="btn btn-white" onclick="openAdmissionForm()">
+            Apply Now / आवेदन करें
+        </button>
 
+    </div>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>About <span>Us</span></h2>
+            <p>हमारे संस्थान के बारे में</p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-card">
+
+                <h3>SHREE SHYAM COMPUTER EDUCATION</h3>
+
+                <p>
+                    श्री श्याम कंप्यूटर एजुकेशन में विद्यार्थियों को
+                    कंप्यूटर और डिजिटल शिक्षा प्रदान की जाती है।
+                    हमारा उद्देश्य विद्यार्थियों को practical knowledge
+                    और बेहतर career opportunities के लिए तैयार करना है।
+                </p>
+
+                <div class="features">
+                    <div class="feature">💻 Practical Computer Training</div>
+                    <div class="feature">📚 Professional Courses</div>
+                    <div class="feature">👨‍🏫 Student Guidance</div>
+                    <div class="feature">🎓 Career Focused Learning</div>
+                </div>
+
+            </div>
+
+            <div class="about-card">
+
+                <h3>Why Choose Us?</h3>
+
+                <p>
+                    ✔ अनुभवी मार्गदर्शन<br>
+                    ✔ कंप्यूटर की practical training<br>
+                    ✔ विभिन्न कंप्यूटर courses<br>
+                    ✔ विद्यार्थियों के लिए friendly environment<br>
+                    ✔ आधुनिक learning facilities
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- COURSES -->
 <section class="courses" id="courses">
 
-<div class="section-title">
-<h2>POPULAR COURSES | लोकप्रिय कोर्स</h2>
-<p>अपना पसंदीदा कंप्यूटर कोर्स चुनें और आज ही सीखना शुरू करें।</p>
-</div>
+    <div class="container">
 
-<div class="course-grid">
+        <div class="section-title">
+            <h2>Our <span>Courses</span></h2>
+            <p>हमारे कंप्यूटर कोर्स</p>
+        </div>
 
-<div class="course-card">
+        <div class="course-grid">
 
-<div class="course-icon">💻</div>
+            <div class="course-card">
 
-<h3>RSCIT REGULAR</h3>
+                <div class="course-icon">💻</div>
 
-<p>Regular Computer Course<br>नियमित कंप्यूटर कोर्स</p>
+                <h3>RS-CIT</h3>
 
-<div class="fee">₹ 3,500</div>
+                <p class="hindi">
+                    राजस्थान स्टेट सर्टिफिकेट इन इन्फॉर्मेशन टेक्नोलॉजी
+                </p>
 
-<button class="btn btn-green" onclick="openAdmission('RSCIT REGULAR')">
-APPLY NOW →
-</button>
+                <p>
+                    Basic computer knowledge, internet and digital skills.
+                </p>
 
-</div>
+                <br>
 
-<div class="course-card">
+                <button class="btn btn-gold"
+                        onclick="openAdmissionForm('RS-CIT')">
+                    Apply Now / आवेदन करें
+                </button>
 
-<div class="course-icon">📖</div>
+            </div>
 
-<h3>RSCIT WITHOUT STUDY</h3>
+            <div class="course-card">
 
-<p>Without Study Material<br>स्टडी मटेरियल के बिना</p>
+                <div class="course-icon">🖥️</div>
 
-<div class="fee">₹ 1,500</div>
+                <h3>Computer Course</h3>
 
-<button class="btn btn-green" onclick="openAdmission('RSCIT WITHOUT STUDY')">
-APPLY NOW →
-</button>
+                <p class="hindi">कंप्यूटर प्रशिक्षण</p>
 
-</div>
+                <p>
+                    Learn computer fundamentals and practical computer skills.
+                </p>
 
-<div class="course-card">
+                <br>
 
-<div class="course-icon">📊</div>
+                <button class="btn btn-gold"
+                        onclick="openAdmissionForm('Computer Course')">
+                    Apply Now / आवेदन करें
+                </button>
 
-<h3>RSCFA / TALLY</h3>
+            </div>
 
-<p>Accounting & Tally Training<br>एकाउंटिंग एवं टैली ट्रेनिंग</p>
+            <div class="course-card">
 
-<div class="fee">₹ 7,500</div>
+                <div class="course-icon">🌐</div>
 
-<button class="btn btn-green" onclick="openAdmission('RSCFA / TALLY')">
-APPLY NOW →
-</button>
+                <h3>Digital Services</h3>
 
-</div>
+                <p class="hindi">डिजिटल सेवाएं</p>
 
-<div class="course-card">
+                <p>
+                    Learn useful digital and online services.
+                </p>
 
-<div class="course-icon">⌨️</div>
+                <br>
 
-<h3>BCC</h3>
+                <button class="btn btn-gold"
+                        onclick="openAdmissionForm('Digital Services')">
+                    Apply Now / आवेदन करें
+                </button>
 
-<p>Basic Computer Skills<br>बेसिक कंप्यूटर ज्ञान</p>
+            </div>
 
-<div class="fee">₹ 2,500</div>
+        </div>
 
-<button class="btn btn-green" onclick="openAdmission('BCC')">
-APPLY NOW →
-</button>
-
-</div>
-
-</div>
+    </div>
 </section>
 
+<!-- GALLERY -->
 <section class="gallery" id="gallery">
 
-<div class="section-title">
-<h2>OUR GALLERY | हमारी गैलरी</h2>
-<p>फोटो पर क्लिक करने पर Full Screen में खुलेगी।</p>
-</div>
+    <div class="container">
 
-<div class="gallery-grid">
+        <div class="section-title">
+            <h2>Our <span>Gallery</span></h2>
+            <p>हमारे संस्थान की तस्वीरें</p>
+        </div>
 
-<div class="gallery-item" onclick="showImage(0)">
-<img src="images/gallery1.jpg" alt="SSCE Computer Center">
-<p>SSCE Computer Center</p>
-</div>
+        <div class="gallery-grid">
 
-<div class="gallery-item" onclick="showImage(1)">
-<img src="images/gallery2.jpg" alt="Computer Lab">
-<p>Computer Lab</p>
-</div>
+            <!-- CENTER FRONT VIEW -->
+            <div class="gallery-card"
+                 onclick="openImage('images/gallery1.jpg')">
 
-<div class="gallery-item" onclick="showImage(2)">
-<img src="images/gallery3.jpg" alt="Computer Class">
-<p>Computer Class</p>
-</div>
+                <div class="gallery-image">
+                    <img src="images/gallery1.jpg"
+                         alt="SSCE Computer Center Front View">
+                </div>
 
-<div class="gallery-item" onclick="showImage(3)">
-<img src="images/gallery4.jpg" alt="Student Area">
-<p>Student Area</p>
-</div>
+                <div class="gallery-caption">
+                    <h3>SSCE Computer Center</h3>
+                    <p>श्री श्याम कंप्यूटर एजुकेशन</p>
+                </div>
 
-<div class="gallery-item" onclick="showImage(4)">
-<img src="images/gallery5.jpg" alt="SSCE Office">
-<p>SSCE Office</p>
-</div>
+            </div>
 
-<div class="gallery-item" onclick="showImage(5)">
-<img src="images/gallery6.jpg" alt="SSCE Center View">
-<p>SSCE Center View</p>
-</div>
+            <!-- OFFICE VIEW -->
+            <div class="gallery-card"
+                 onclick="openImage('images/gallery2.jpg')">
 
-</div>
-</section>
+                <div class="gallery-image">
+                    <img src="images/gallery2.jpg"
+                         alt="Office View">
+                </div>
 
-<div id="lightbox">
+                <div class="gallery-caption">
+                    <h3>Office View</h3>
+                    <p>कार्यालय का दृश्य</p>
+                </div>
 
-<button class="lightbox-close" onclick="closeLightbox()">×</button>
+            </div>
 
-<button class="lightbox-prev" onclick="previousImage()">‹</button>
+            <!-- COMPUTER CLASS -->
+            <div class="gallery-card"
+                 onclick="openImage('images/gallery3.jpg')">
 
-<img id="lightboxImage" src="" alt="Gallery Photo">
+                <div class="gallery-image">
+                    <img src="images/gallery3.jpg"
+                         alt="Computer Class">
+                </div>
 
-<button class="lightbox-next" onclick="nextImage()">›</button>
+                <div class="gallery-caption">
+                    <h3>Computer Class</h3>
+                    <p>कंप्यूटर कक्षा</p>
+                </div>
 
-</div>
+            </div>
 
-<section class="about" id="about">
+            <!-- COMPUTER LAB -->
+            <div class="gallery-card"
+                 onclick="openImage('images/gallery4.jpg')">
 
-<h2>ABOUT SHREE SHYAM COMPUTER EDUCATION</h2>
+                <div class="gallery-image">
+                    <img src="images/gallery4.jpg"
+                         alt="Computer Lab">
+                </div>
 
-<p>
-श्री श्याम कंप्यूटर एजुकेशन, मारोठ विद्यार्थियों को गुणवत्तापूर्ण
-कंप्यूटर शिक्षा, डिजिटल कौशल, RSCIT और रोजगार उपयोगी प्रशिक्षण
-प्रदान करने के लिए समर्पित है।
-</p>
+                <div class="gallery-caption">
+                    <h3>Computer Lab</h3>
+                    <p>कंप्यूटर प्रयोगशाला</p>
+                </div>
 
-</section>
+            </div>
 
-<section id="admission">
+            <!-- OFFICE VIEW -->
+            <div class="gallery-card"
+                 onclick="openImage('images/gallery5.jpg')">
 
-<div class="section-title">
+                <div class="gallery-image">
+                    <img src="images/gallery5.jpg"
+                         alt="Office View">
+                </div>
 
-<h2>ONLINE ADMISSION | ऑनलाइन प्रवेश</h2>
+                <div class="gallery-caption">
+                    <h3>Office View</h3>
+                    <p>कार्यालय का दृश्य</p>
+                </div>
 
-<p>
-नीचे दिए गए बटन पर क्लिक करके प्रवेश फॉर्म भरें।
-</p>
+            </div>
 
-<button class="btn btn-gold" onclick="openAdmission('')">
-📝 OPEN ADMISSION FORM
-</button>
+            <!-- COMPUTER LAB -->
+            <div class="gallery-card"
+                 onclick="openImage('images/gallery6.jpg')">
 
-</div>
+                <div class="gallery-image">
+                    <img src="images/gallery6.jpg"
+                         alt="Computer Lab">
+                </div>
 
-</section>
-
-<section class="contact" id="contact">
-
-<div class="section-title">
-<h2>CONTACT & LOCATION</h2>
-<p>हमारे कंप्यूटर सेंटर की लोकेशन</p>
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-card">
-
-<h3>SHREE SHYAM COMPUTER EDUCATION</h3>
-
-<p>
-<b>📍 Address:</b><br>
-Opposite Jain Main Market, Maroth,<br>
-Tehsil Nawa, District Didwana-Kuchaman,<br>
-Rajasthan – 341507
-</p>
-
-<p><b>🎓 Center Code:</b> 32290325</p>
-
-<p><b>📞 Phone:</b> 01586-299472</p>
-
-<p><b>🟢 WhatsApp:</b> 7231905659</p>
-
-<p><b>✉ Email:</b> sscemaroth@gmail.com</p>
-
-<a
-class="btn btn-gold"
-href="https://maps.app.goo.gl/dWzr7Fpv7VkH942D8"
-target="_blank">
-
-📍 OPEN IN GOOGLE MAPS
-
-</a>
-
-</div>
-
-<div class="map-card">
-
-<iframe
-src="https://www.google.com/maps?q=Shree+Shyam+Computer+Education+Maroth+Rajasthan&output=embed"
-loading="lazy">
-</iframe>
-
-</div>
-
-</div>
-</section>
-
-<!-- ADMISSION POPUP -->
-
-<div id="admissionModal">
-
-<div class="form-box">
-
-<button class="close-form" onclick="closeAdmission()">×</button>
-
-<h2>STUDENT ADMISSION FORM</h2>
-
-<p>
-फॉर्म Submit करने के बाद आपकी जानकारी WhatsApp पर भेजने के लिए खुल जाएगी।
-</p>
-
-<form id="admissionForm">
-
-<div class="form-grid">
-
-<div class="form-group">
-
-<label>Student Name *</label>
-
-<input type="text" name="name" required>
-
-</div>
-
-<div class="form-group">
-
-<label>Father's Name *</label>
-
-<input type="text" name="father" required>
-
-</div>
-
-<div class="form-group">
-
-<label>Mobile Number *</label>
-
-<input
-type="tel"
-name="mobile"
-pattern="[0-9]{10}"
-maxlength="10"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label>Email ID</label>
-
-<input type="email" name="email">
-
-</div>
-
-<div class="form-group">
-
-<label>Select Course *</label>
-
-<select name="course" id="course" required>
-
-<option value="">Select Course</option>
-
-<option value="RSCIT REGULAR">RSCIT REGULAR</option>
-
-<option value="RSCIT WITHOUT STUDY">RSCIT WITHOUT STUDY</option>
-
-<option value="RSCFA / TALLY">RSCFA / TALLY</option>
-
-<option value="BCC">BCC</option>
-
-<option value="OTHER">OTHER</option>
-
-</select>
-
-</div>
-
-<div class="form-group">
-
-<label>Qualification *</label>
-
-<select name="qualification" required>
-
-<option value="">Select Qualification</option>
-
-<option>8th</option>
-<option>10th</option>
-<option>12th</option>
-<option>Graduate</option>
-<option>Post Graduate</option>
-<option>Other</option>
-
-</select>
-
-</div>
-
-<div class="form-group full">
-
-<label>Full Address *</label>
-
-<textarea name="address" required></textarea>
-
-</div>
-
-<div class="form-group full">
-
-<label>Message / Query</label>
-
-<textarea name="message"></textarea>
-
-</div>
-
-<div class="form-group full">
-
-<button
-type="submit"
-class="btn btn-gold"
-style="width:100%;margin:0;">
-
-SUBMIT & SEND ON WHATSAPP
-
-</button>
-
-</div>
-
-</div>
-
-</form>
-
-</div>
-</div>
-
-<a
-class="whatsapp-float"
-href="https://wa.me/917231905659"
-target="_blank">
-
-🟢 WhatsApp
-
-</a>
-
-<footer>
-
-© 2026 SHREE SHYAM COMPUTER EDUCATION | MAROTH<br>
-CENTER CODE: 32290325
-
-</footer>
-
-<script>
-
-/* ADMISSION FORM */
-
-const admissionModal =
-document.getElementById("admissionModal");
-
-function openAdmission(courseName){
-
-  admissionModal.classList.add("show");
-
-  document.body.style.overflow="hidden";
-
-  if(courseName){
-    document.getElementById("course").value=courseName;
-  }
-}
-
-function closeAdmission(){
-
-  admissionModal.classList.remove("show");
-
-  document.body.style.overflow="";
-}
-
-/* WHATSAPP FORM */
-
-document
-.getElementById("admissionForm")
-.addEventListener("submit",function(e){
-
-e.preventDefault();
-
-const formData=new FormData(this);
-
-const message=
-`🎓 NEW STUDENT ADMISSION REQUEST
-
-👤 Student Name: ${formData.get("name")}
-
-👨 Father's Name: ${formData.get("father")}
-
-📱 Mobile: ${formData.get("mobile")}
-
-📧 Email: ${formData.get("email")}
-
-📚 Course: ${formData.get("course")}
-
-🎓 Qualification: ${formData.get("qualification")}
-
-📍 Address: ${formData.get("address")}
-
-💬 Message: ${formData.get("message")}
-
-Website: SSCE Maroth`;
-
-const whatsappNumber="917231905659";
-
-const whatsappURL=
-"https://wa.me/"+
-whatsappNumber+
-"?text="+
-encodeURIComponent(message);
-
-window.open(whatsappURL,"_blank");
-
-});
-
-
-/* GALLERY */
-
-const galleryImages=[
-
-"images/gallery1.jpg",
-"images/gallery2.jpg",
-"images/gallery3.jpg",
-"images/gallery4.jpg",
-"images/gallery5.jpg",
-"images/gallery6.jpg"
-
-];
-
-let currentImage=0;
-
-function showImage(index){
-
-currentImage=index;
-
-document.getElementById("lightboxImage").src=
-galleryImages[currentImage];
-
-document.getElementById("lightbox")
-.classList.add("show");
-
-}
-
-function closeLightbox(){
-
-document.getElementById("lightbox")
-.classList.remove("show");
-
-}
-
-function nextImage(){
-
-currentImage++;
-
-if(currentImage>=galleryImages.length){
-currentImage=0;
-}
-
-document.getElementById("lightboxImage").src=
-galleryImages[currentImage];
-
-}
-
-function previousImage(){
-
-currentImage--;
-
-if(currentImage<0){
-currentImage=galleryImages.length-1;
-}
-
-document.getElementById("lightboxImage").src=
-galleryImages[currentImage];
-
-}
-
-
-/* KEYBOARD */
-
-document.addEventListener("keydown",function(e){
-
-if(e.key==="Escape"){
-closeLightbox();
-closeAdmission();
-}
-
-if(e.key==="ArrowRight"){
-nextImage();
-}
-
-if(e.key==="ArrowLeft"){
-previousImage();
-}
-
-});
-
-</script>
-
-</body>
-</html>
+                <div class="gallery-caption">
